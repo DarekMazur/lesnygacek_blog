@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `lesnygacek`,
+    title: `Leśny Gacek`,
     siteUrl: `https://www.lesnygacek.pl`,
   },
   plugins: [
