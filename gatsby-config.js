@@ -37,5 +37,25 @@ module.exports = {
       },
       __key: 'pages',
     },
+    {
+      resolve: `gatsby-plugin-google-fonts-v2`,
+      options: {
+        fonts: [
+          {
+            family: 'Montserrat',
+            weights: ['200', '400', '600', '900'],
+            variable: ['ital'],
+          },
+          {
+            family: 'Holtwood One SC',
+            weights: ['400'],
+          },
+          {
+            family: 'Cormorant Unicase',
+            weights: ['400'],
+          },
+        ],
+      },
+    },
   ],
 };
