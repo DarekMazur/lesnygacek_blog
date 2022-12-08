@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledLogo = styled.div`
-  height: 10rem;
+  height: ${({ size }) => (size ? `${size}rem` : `10rem`)};
   width: auto;
 
   svg {
