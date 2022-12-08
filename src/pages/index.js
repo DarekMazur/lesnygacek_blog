@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
 import Icon from '../Components/Atoms/Icon/Icon';
+import Title from '../Components/Atoms/Title/Title';
 import Layout from '../Components/Templates/Layout/Layout';
 import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
@@ -11,7 +12,13 @@ const IndexPage = () => {
       <GlobalStyle />
       <Layout>
         <main>
-          <h2>Main</h2>
+          <div>
+            <Title>Lorem Ipsum dolor sit amet</Title>
+          </div>
+          <div style={{ backgroundColor: '#444' }}>
+            <Title light>Lorem Ipsum dolor sit amet</Title>
+          </div>
+
           <div>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />
             <Icon icon={'fa'} iconType={['fab', 'youtube']} size="medium" />
