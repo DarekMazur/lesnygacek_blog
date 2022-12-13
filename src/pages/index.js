@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
+import Button from '../Components/Atoms/Button/Button';
 import Icon from '../Components/Atoms/Icon/Icon';
 import MenuListItem from '../Components/Atoms/MenuListItem/MenuListItem';
 import Title from '../Components/Atoms/Title/Title';
@@ -73,6 +74,12 @@ const IndexPage = () => {
               <MenuListItem social="instagram" light />
               <MenuListItem social="messenger" light />
             </ul>
+          </div>
+          <div>
+            <Button defaultText={'Click me!'} hoverText={'Go on!'} loadingText={'Loading!'} />
+          </div>
+          <div style={{ backgroundColor: '#444' }}>
+            <Button defaultText={'Click me!'} hoverText={'Go on!'} loadingText={'Loading!'} light />
           </div>
         </main>
       </Layout>
