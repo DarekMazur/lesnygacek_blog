@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
 import Icon from '../Components/Atoms/Icon/Icon';
+import MenuListItem from '../Components/Atoms/MenuListItem/MenuListItem';
 import Title from '../Components/Atoms/Title/Title';
 import Layout from '../Components/Templates/Layout/Layout';
 import { GlobalStyle } from '../styles/globalStyle';
@@ -52,6 +53,26 @@ const IndexPage = () => {
             <Icon iconType="axe" light size="default" />
             <Icon iconType="backpack" light size="default" />
             <Icon iconType="campfire" light size="default" />
+          </div>
+          <div>
+            <ul>
+              <MenuListItem>Item</MenuListItem>
+              <MenuListItem>Item</MenuListItem>
+              <MenuListItem social="youtube" />
+              <MenuListItem social="facebook" />
+              <MenuListItem social="instagram" />
+              <MenuListItem social="messenger" />
+            </ul>
+          </div>
+          <div style={{ backgroundColor: '#444' }}>
+            <ul>
+              <MenuListItem light>Item</MenuListItem>
+              <MenuListItem light>Item</MenuListItem>
+              <MenuListItem social="youtube" light />
+              <MenuListItem social="facebook" light />
+              <MenuListItem social="instagram" light />
+              <MenuListItem social="messenger" light />
+            </ul>
           </div>
         </main>
       </Layout>
