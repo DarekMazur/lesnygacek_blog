@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 export const StyledTitle = styled.div`
   color: ${({ theme, light }) => (light ? theme.colors.white : theme.colors.dark)};
-  font-family: ${({ theme }) => theme.fonts.header};
-  font-size: ${({ theme }) => theme.fontSize.xl};
-  margin: 4rem;
+  font-family: ${({ theme, sub }) => (sub ? theme.fonts.subheader : theme.fonts.header)};
+  font-size: ${({ theme, sub }) => (sub ? theme.fontSize.lm : theme.fontSize.xl)};
+  font-weight: ${({ theme, sub }) => (sub ? theme.fontWeight.bold : theme.fontWeight.regular)};
+  margin: ${({ sub }) => (sub ? `1rem` : `4rem`)};
   padding: 1rem;
   max-width: 45rem;
   text-align: center;
@@ -15,6 +16,7 @@ export const StyledTitle = styled.div`
 
     &::before,
     &::after {
+      display: ${({ sub }) => (sub ? `none` : `block`)};
       content: '';
       position: absolute;
       border: ${({ theme }) => `1rem solid ${theme.colors.green}`};

@@ -18,6 +18,14 @@ const IndexPage = () => {
           <div style={{ backgroundColor: '#444' }}>
             <Title light>Lorem Ipsum dolor sit amet</Title>
           </div>
+          <div>
+            <Title sub>Lorem Ipsum dolor sit amet</Title>
+          </div>
+          <div style={{ backgroundColor: '#444' }}>
+            <Title light sub>
+              Lorem Ipsum dolor sit amet
+            </Title>
+          </div>
 
           <div>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />
