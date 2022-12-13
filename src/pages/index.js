@@ -76,10 +76,16 @@ const IndexPage = () => {
             </ul>
           </div>
           <div>
-            <Button defaultText={'Click me!'} hoverText={'Go on!'} loadingText={'Loading!'} />
+            <Button primaryText={'Click me!'} secondaryText={'Go on!'} loadingText={'Loading!'} />
           </div>
           <div style={{ backgroundColor: '#444' }}>
-            <Button defaultText={'Click me!'} hoverText={'Go on!'} loadingText={'Loading!'} light />
+            <Button primaryText={'Click me!'} secondaryText={'Go on!'} loadingText={'Loading!'} light />
+          </div>
+          <div>
+            <Button primaryText={'Click me!'} secondaryText={'Go on!'} />
+          </div>
+          <div style={{ backgroundColor: '#444' }}>
+            <Button primaryText={'Click me!'} secondaryText={'Go on!'} light />
           </div>
         </main>
       </Layout>
