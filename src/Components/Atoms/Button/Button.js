@@ -1,12 +1,13 @@
 import React from 'react';
+import { StyledButton } from './Button.styles';
 
 const Button = ({ primaryText, secondaryText, loadingText, light }) => {
   return (
-    <button>
+    <StyledButton light={light}>
       <span>{primaryText}</span>
       {loadingText ? <span>{loadingText}</span> : null}
       {secondaryText ? <span>{secondaryText}</span> : null}
-    </button>
+    </StyledButton>
   );
 };
 
