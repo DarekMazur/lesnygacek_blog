@@ -29,7 +29,7 @@ const Button = ({ primaryText, secondaryText, loadingText, light }) => {
       onMouseLeave={() => {
         if (!loadingText) return setIsLoading(false);
       }}
-      sending={loadingText}
+      allowSending={loadingText}
     >
       <span>{primaryText}</span>
       {loadingText ? <span>{loadingText}</span> : null}
