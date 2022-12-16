@@ -32,7 +32,7 @@ const Button = ({ primaryText, secondaryText, loadingText, light }) => {
       allowSending={loadingText}
     >
       <span>{primaryText}</span>
-      {loadingText ? <span>{loadingText}</span> : null}
+      {loadingText ? <span data-testid="loadingSpan">{loadingText}</span> : null}
       {secondaryText ? <span>{secondaryText}</span> : null}
     </StyledButton>
   );
