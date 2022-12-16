@@ -1,73 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Render Custom Icon: - rendered component with custom icon match to snapshot: 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body />,
+  "container": <div />,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
 exports[`Render FA Icon: - rendered component match to snapshot: 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
-    <div>
-      <span
-        class="sc-bczRLJ gjOKni"
-      >
-        <svg
-          aria-hidden="true"
-          class="svg-inline--fa fa-facebook-messenger fa-w-16 "
-          data-icon="facebook-messenger"
-          data-prefix="fab"
-          focusable="false"
-          role="img"
-          viewBox="0 0 512 512"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M256.55 8C116.52 8 8 110.34 8 248.57c0 72.3 29.71 134.78 78.07 177.94 8.35 7.51 6.63 11.86 8.05 58.23A19.92 19.92 0 0 0 122 502.31c52.91-23.3 53.59-25.14 62.56-22.7C337.85 521.8 504 423.7 504 248.57 504 110.34 396.59 8 256.55 8zm149.24 185.13l-73 115.57a37.37 37.37 0 0 1-53.91 9.93l-58.08-43.47a15 15 0 0 0-18 0l-78.37 59.44c-10.46 7.93-24.16-4.6-17.11-15.67l73-115.57a37.36 37.36 0 0 1 53.91-9.93l58.06 43.46a15 15 0 0 0 18 0l78.41-59.38c10.44-7.98 24.14 4.54 17.09 15.62z"
-            fill="currentColor"
-          />
-        </svg>
-      </span>
-    </div>
-    <div>
-      <span
-        class="sc-bczRLJ gjOKni"
-      >
-        <svg
-          aria-hidden="true"
-          class="svg-inline--fa fa-facebook-messenger fa-w-16 "
-          data-icon="facebook-messenger"
-          data-prefix="fab"
-          focusable="false"
-          role="img"
-          viewBox="0 0 512 512"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M256.55 8C116.52 8 8 110.34 8 248.57c0 72.3 29.71 134.78 78.07 177.94 8.35 7.51 6.63 11.86 8.05 58.23A19.92 19.92 0 0 0 122 502.31c52.91-23.3 53.59-25.14 62.56-22.7C337.85 521.8 504 423.7 504 248.57 504 110.34 396.59 8 256.55 8zm149.24 185.13l-73 115.57a37.37 37.37 0 0 1-53.91 9.93l-58.08-43.47a15 15 0 0 0-18 0l-78.37 59.44c-10.46 7.93-24.16-4.6-17.11-15.67l73-115.57a37.36 37.36 0 0 1 53.91-9.93l58.06 43.46a15 15 0 0 0 18 0l78.41-59.38c10.44-7.98 24.14 4.54 17.09 15.62z"
-            fill="currentColor"
-          />
-        </svg>
-      </span>
-    </div>
-  </body>,
-  "container": <div>
-    <span
-      class="sc-bczRLJ gjOKni"
-    >
-      <svg
-        aria-hidden="true"
-        class="svg-inline--fa fa-facebook-messenger fa-w-16 "
-        data-icon="facebook-messenger"
-        data-prefix="fab"
-        focusable="false"
-        role="img"
-        viewBox="0 0 512 512"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M256.55 8C116.52 8 8 110.34 8 248.57c0 72.3 29.71 134.78 78.07 177.94 8.35 7.51 6.63 11.86 8.05 58.23A19.92 19.92 0 0 0 122 502.31c52.91-23.3 53.59-25.14 62.56-22.7C337.85 521.8 504 423.7 504 248.57 504 110.34 396.59 8 256.55 8zm149.24 185.13l-73 115.57a37.37 37.37 0 0 1-53.91 9.93l-58.08-43.47a15 15 0 0 0-18 0l-78.37 59.44c-10.46 7.93-24.16-4.6-17.11-15.67l73-115.57a37.36 37.36 0 0 1 53.91-9.93l58.06 43.46a15 15 0 0 0 18 0l78.41-59.38c10.44-7.98 24.14 4.54 17.09 15.62z"
-          fill="currentColor"
-        />
-      </svg>
-    </span>
-  </div>,
+  "baseElement": <body />,
+  "container": <div />,
   "debug": [Function],
   "findAllByAltText": [Function],
   "findAllByDisplayValue": [Function],

@@ -17,7 +17,8 @@
   },
   "lint-staged": {
     "src/**/*.{js,json}": [
-      "prettier --write"
+      "prettier --write",
+      "npm test"
     ]
   },
   "husky": {

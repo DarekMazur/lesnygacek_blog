@@ -5,8 +5,8 @@ import { customIcon } from '../../../utils/helpers/customIcon';
 
 const Icon = ({ icon, iconType, light, size }) => {
   return (
-    <StyledIcon light={light} size={size}>
-      {icon && icon === 'fa' ? <FontAwesomeIcon icon={iconType} /> : customIcon[iconType]}
+    <StyledIcon light={light} size={size} data-testid={iconType}>
+      {icon && icon === 'fa' ? <FontAwesomeIcon data-testid={icon} icon={iconType} /> : customIcon[iconType]}
     </StyledIcon>
   );
 };
