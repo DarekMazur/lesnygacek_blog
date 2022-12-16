@@ -4,6 +4,18 @@ module.exports = {
     siteUrl: `https://www.lesnygacek.pl`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingID: 'G-QLELEH6H8Z8',
+        head: false,
+        anonymize: true,
+        repectDNT: true,
+        pageTransitionDelay: 0,
+        defer: false,
+        enableWebVitalsTracking: true,
+      },
+    },
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-google-analytics',
