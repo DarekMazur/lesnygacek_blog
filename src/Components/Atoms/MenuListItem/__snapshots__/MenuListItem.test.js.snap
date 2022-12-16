@@ -1,10 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button: - rendered component match to snapshot: 1`] = `
+exports[`Render FA Icon: - rendered component match to snapshot: 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body />,
-  "container": <div />,
+  "baseElement": <body>
+    <div>
+      <li
+        class="sc-gsnTZi fuMPfa"
+      >
+        Item
+      </li>
+    </div>
+    <div>
+      <li
+        class="sc-gsnTZi fuMPfa"
+      />
+    </div>
+  </body>,
+  "container": <div>
+    <li
+      class="sc-gsnTZi fuMPfa"
+    >
+      Item
+    </li>
+  </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
   "findAllByDisplayValue": [Function],
