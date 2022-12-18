@@ -10,7 +10,7 @@ const MenuListItem = ({ children, social, light }) => {
     messenger: 'facebook-messenger',
   };
   return (
-    <StyledMenuListItem social={social} light={light}>
+    <StyledMenuListItem social={social} light={light} data-testid={social}>
       {social ? <Icon icon={'fa'} iconType={['fab', socialIconName[social]]} light={light} size="default" /> : children}
     </StyledMenuListItem>
   );
