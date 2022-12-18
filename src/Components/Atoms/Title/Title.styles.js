@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledTitle = styled.div`
-  color: ${({ theme, light }) => (light ? theme.colors.white : theme.colors.dark)};
-  font-family: ${({ theme, sub }) => (sub ? theme.fonts.subheader : theme.fonts.header)};
-  font-size: ${({ theme, sub }) => (sub ? theme.fontSize.lm : theme.fontSize.xl)};
-  font-weight: ${({ theme, sub }) => (sub ? theme.fontWeight.bold : theme.fontWeight.regular)};
   margin: ${({ sub }) => (sub ? `1rem` : `4rem`)};
   padding: 1rem;
   max-width: 45rem;
@@ -13,6 +9,10 @@ export const StyledTitle = styled.div`
   h3 {
     width: 100%;
     position: relative;
+    color: ${({ theme, light }) => (light ? theme.colors.white : theme.colors.dark)};
+    font-family: ${({ theme, sub }) => (sub ? theme.fonts.subheader : theme.fonts.header)};
+    font-size: ${({ theme, sub }) => (sub ? theme.fontSize.lm : theme.fontSize.xl)};
+    font-weight: ${({ theme, sub }) => (sub ? theme.fontWeight.bold : theme.fontWeight.regular)};
 
     &::before,
     &::after {
