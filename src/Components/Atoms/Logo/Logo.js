@@ -4,7 +4,7 @@ import { StyledLogo } from './Logo.styled';
 
 const Logo = ({ logo, light, size }) => {
   return (
-    <StyledLogo light={light} size={size}>
+    <StyledLogo light={light} size={size} data-testid={logo}>
       {vectorLogo[logo]}
     </StyledLogo>
   );
