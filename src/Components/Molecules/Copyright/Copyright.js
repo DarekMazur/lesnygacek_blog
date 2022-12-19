@@ -9,7 +9,7 @@ const Copyright = ({ pageCopy }) => {
     <StyledCopyright pageCopy={pageCopy}>
       {pageCopy ? (
         <>
-          <Logo logo={'long'} light />
+          <Logo logo={'long'} light={'dark'} />
           &copy; {date.getFullYear()}
         </>
       ) : (

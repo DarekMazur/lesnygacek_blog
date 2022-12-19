@@ -7,13 +7,14 @@ const Layout = ({ children }) => {
     <>
       <header style={{ backgroundColor: '#444' }}>
         <Logo logo={'long'} light />
+        <Logo logo={'long'} light={'dark'} />
         <Logo logo={'long'} />
         <Logo logo={'long'} size="8" />
         <Logo logo={'long'} size="5" />
         <Logo logo={'square'} />
       </header>
       {children}
-      <footer>
+      <footer style={{ backgroundColor: '#93806F' }}>
         <Copyright pageCopy />
         <Copyright />
       </footer>

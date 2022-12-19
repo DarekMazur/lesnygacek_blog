@@ -8,7 +8,7 @@ export const StyledLogo = styled.div`
     height: 100%;
 
     path {
-      fill: ${({ theme, light }) => (light ? theme.colors.brown : null)};
+      fill: ${({ theme, light }) => (light ? (light === 'dark' ? theme.colors.dark : theme.colors.brown) : null)};
     }
   }
 `;
