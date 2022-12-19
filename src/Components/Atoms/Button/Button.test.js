@@ -1,8 +1,8 @@
 import React from 'react';
 import '@testing-library/jest-dom';
 import Button from './Button';
-import { renderWithProvider } from '../../../helpers/renderWithProvider';
 import { fireEvent, screen } from '@testing-library/dom';
+import { renderWithProvider } from '../../../utils/helpers/renderWithProvider';
 
 const container = renderWithProvider(<Button primaryText={'Click me!'} secondaryText={'Success!'} loadingText={'Loading!'} />);
 

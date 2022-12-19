@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { fireEvent, screen, waitFor } from '@testing-library/dom';
 import React from 'react';
-import { renderWithProvider } from '../../../helpers/renderWithProvider';
+import { renderWithProvider } from '../../../utils/helpers/renderWithProvider';
 import Icon from './Icon';
 
 const container = renderWithProvider(<Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} light size="medium" />);

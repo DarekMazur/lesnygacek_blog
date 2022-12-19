@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/dom';
 import '@testing-library/jest-dom';
 import React from 'react';
-import { renderWithProvider } from '../../../helpers/renderWithProvider';
+import { renderWithProvider } from '../../../utils/helpers/renderWithProvider';
 import MenuListItem from './MenuListItem';
 
 const container = renderWithProvider(<MenuListItem>Item</MenuListItem>);

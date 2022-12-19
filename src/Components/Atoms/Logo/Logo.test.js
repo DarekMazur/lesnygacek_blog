@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/dom';
 import '@testing-library/jest-dom';
 import React from 'react';
-import { renderWithProvider } from '../../../helpers/renderWithProvider';
+import { renderWithProvider } from '../../../utils/helpers/renderWithProvider';
 import Logo from './Logo';
 
 const container = renderWithProvider(<Logo logo={'long'} size="8" />);
