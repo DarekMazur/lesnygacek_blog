@@ -4,6 +4,7 @@ import Button from '../Components/Atoms/Button/Button';
 import Icon from '../Components/Atoms/Icon/Icon';
 import MenuListItem from '../Components/Atoms/MenuListItem/MenuListItem';
 import Title from '../Components/Atoms/Title/Title';
+import MenuList from '../Components/Molecules/MenuList/MenuList';
 import Layout from '../Components/Templates/Layout/Layout';
 import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
@@ -56,24 +57,28 @@ const IndexPage = () => {
             <Icon iconType="campfire" light size="default" />
           </div>
           <div>
-            <ul>
+            <MenuList>
               <MenuListItem>Item</MenuListItem>
               <MenuListItem>Item</MenuListItem>
+            </MenuList>
+            <MenuList>
               <MenuListItem social="youtube" />
               <MenuListItem social="facebook" />
               <MenuListItem social="instagram" />
               <MenuListItem social="messenger" />
-            </ul>
+            </MenuList>
           </div>
           <div style={{ backgroundColor: '#444' }}>
-            <ul>
+            <MenuList>
               <MenuListItem light>Item</MenuListItem>
               <MenuListItem light>Item</MenuListItem>
+            </MenuList>
+            <MenuList>
               <MenuListItem social="youtube" light />
               <MenuListItem social="facebook" light />
               <MenuListItem social="instagram" light />
               <MenuListItem social="messenger" light />
-            </ul>
+            </MenuList>
           </div>
           <div>
             <Button primaryText={'Click me!'} secondaryText={'Success!'} loadingText={'Loading!'} />
