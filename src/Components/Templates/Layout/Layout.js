@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from '../../Atoms/Logo/Logo';
+import Copyright from '../../Molecules/Copyright/Copyright';
 
 const Layout = ({ children }) => {
   return (
@@ -12,7 +13,10 @@ const Layout = ({ children }) => {
         <Logo logo={'square'} />
       </header>
       {children}
-      <footer>Footer</footer>
+      <footer>
+        <Copyright pageCopy />
+        <Copyright />
+      </footer>
     </>
   );
 };
