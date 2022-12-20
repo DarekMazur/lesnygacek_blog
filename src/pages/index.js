@@ -5,6 +5,7 @@ import Icon from '../Components/Atoms/Icon/Icon';
 import MenuListItem from '../Components/Atoms/MenuListItem/MenuListItem';
 import Title from '../Components/Atoms/Title/Title';
 import MenuList from '../Components/Molecules/MenuList/MenuList';
+import SectionHeader from '../Components/Molecules/SectionHeader/SectionHeader';
 import Layout from '../Components/Templates/Layout/Layout';
 import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
@@ -92,6 +93,18 @@ const IndexPage = () => {
           <div style={{ backgroundColor: '#444' }}>
             <Button primaryText={'Click me!'} secondaryText={'Go on!'} light />
           </div>
+          <SectionHeader title={'Lorem Ipsum Dolor'}>
+            <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />
+            <div>
+              <Button primaryText={'Click me!'} secondaryText={'Success!'} loadingText={'Loading!'} />
+            </div>
+          </SectionHeader>
+          <SectionHeader title={'Dolor Sit Amet'} light>
+            <Icon icon={'fa'} iconType={['fab', 'facebook-f']} size="default" light />
+            <div>
+              <Button primaryText={'Click me!'} secondaryText={'Success!'} loadingText={'Loading!'} light />
+            </div>
+          </SectionHeader>
         </main>
       </Layout>
     </ThemeProvider>
