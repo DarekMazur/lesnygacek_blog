@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
 import Button from '../Components/Atoms/Button/Button';
+import Category from '../Components/Atoms/Category/Category';
 import Icon from '../Components/Atoms/Icon/Icon';
 import MenuListItem from '../Components/Atoms/MenuListItem/MenuListItem';
 import Title from '../Components/Atoms/Title/Title';
@@ -27,6 +28,19 @@ const IndexPage = () => {
             <Title light sub>
               Lorem Ipsum dolor sit amet
             </Title>
+          </div>
+
+          <div>
+            <Category category="tools" />
+            <Category category="trips" />
+            <Category category="thoughts" />
+            <Category category="others" />
+          </div>
+          <div style={{ backgroundColor: '#444' }}>
+            <Category category="tools" light />
+            <Category category="trips" light />
+            <Category category="thoughts" light />
+            <Category category="others" light />
           </div>
 
           <div>
