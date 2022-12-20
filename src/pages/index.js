@@ -46,7 +46,9 @@ const IndexPage = () => {
             <Category category="others" light />
           </div>
 
-          <ArticleThumb />
+          <SectionHeader title={'Lorem Ipsum Dolor'}>
+            <ArticleThumb />
+          </SectionHeader>
 
           <div>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />
@@ -110,7 +112,8 @@ const IndexPage = () => {
           <div style={{ backgroundColor: '#444' }}>
             <Button primaryText={'Click me!'} secondaryText={'Go on!'} light />
           </div>
-          <SectionHeader title={'Lorem Ipsum Dolor'}>
+
+          <SectionHeader title={'Lorem Ipsum Dolor'} options={['right', 'light']}>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />
             <div>
               <Button primaryText={'Click me!'} secondaryText={'Success!'} loadingText={'Loading!'} />

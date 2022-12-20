@@ -2,12 +2,9 @@ import styled from 'styled-components';
 
 export const StyledSectionHeader = styled.section`
   display: flex;
+  flex-direction: ${({ position }) => (position && position === 'right' ? 'row-reverse' : 'row')};
   justify-content: space-between;
   align-items: center;
   padding: 0 3rem;
-
-  &:nth-of-type(even) {
-    flex-direction: row-reverse;
-    background-color: ${({ theme }) => theme.colors.dark};
-  }
+  background-color: ${({ theme, light }) => (light && light === 'light' ? theme.colors.white : theme.colors.dark)};
 `;
