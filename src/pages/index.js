@@ -5,6 +5,7 @@ import Category from '../Components/Atoms/Category/Category';
 import Icon from '../Components/Atoms/Icon/Icon';
 import MenuListItem from '../Components/Atoms/MenuListItem/MenuListItem';
 import Title from '../Components/Atoms/Title/Title';
+import ArticleThumb from '../Components/Molecules/ArticleThumb/ArticleThumb';
 import MenuList from '../Components/Molecules/MenuList/MenuList';
 import SectionHeader from '../Components/Molecules/SectionHeader/SectionHeader';
 import Layout from '../Components/Templates/Layout/Layout';
@@ -44,6 +45,8 @@ const IndexPage = () => {
             <Category category="thoughts" light />
             <Category category="others" light />
           </div>
+
+          <ArticleThumb />
 
           <div>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />

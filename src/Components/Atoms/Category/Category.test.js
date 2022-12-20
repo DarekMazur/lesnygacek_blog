@@ -1,7 +1,7 @@
 import React from 'react';
 import '@testing-library/jest-dom';
 import { screen } from '@testing-library/dom';
-import { renderWithProvider } from '../../../helpers/renderWithProvider';
+import { renderWithProvider } from '../../../utils/helpers/renderWithProvider';
 import Category from './Category';
 import { categoryIcon, categoryTitle } from '../../../utils/helpers/category';
 
