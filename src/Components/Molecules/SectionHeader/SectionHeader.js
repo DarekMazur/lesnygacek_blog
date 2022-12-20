@@ -5,7 +5,7 @@ import { StyledSectionHeader } from './SectionHeader.styles';
 const SectionHeader = ({ title, options, children }) => {
   return (
     <StyledSectionHeader data-testid="sectionHeader" light={options?.[1]} position={options?.[0]}>
-      <Title light={options?.[1]}>{title}</Title>
+      <Title light={options?.[1] && options?.[1] === 'light' ? false : true}>{title}</Title>
       <div>{children}</div>
     </StyledSectionHeader>
   );
