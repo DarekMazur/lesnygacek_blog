@@ -2,6 +2,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import Category from '../../Atoms/Category/Category';
 import Title from '../../Atoms/Title/Title';
+import ArticleDetails from '../ArticleDetails/ArticleDetails';
 
 const ArticleThumb = ({ articleData }) => {
   return (
@@ -16,11 +17,12 @@ const ArticleThumb = ({ articleData }) => {
         formats={['auto', 'webp']}
       />
       {/* ---- molecule ---- */}
-      <div style={{ display: 'flex', flexDirection: 'column', JustifyContent: 'center', alignItems: 'center' }}>
+      {/* <div style={{ display: 'flex', flexDirection: 'column', JustifyContent: 'center', alignItems: 'center' }}>
         <p>{articleData.publishedAt}</p>
         <Title sub>Lorem Ipsum</Title>
         <Category category={articleData.category} />
-      </div>
+      </div> */}
+      <ArticleDetails date={articleData.publishedAt} title={articleData.title} category={articleData.category} />
       <div>{articleData.description}</div>
     </div>
   );
