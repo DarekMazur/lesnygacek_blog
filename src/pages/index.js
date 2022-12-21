@@ -53,7 +53,7 @@ const IndexPage = () => {
             <Category category="others" />
           </div>
 
-          <SectionHeader title={mockData[0].title}>
+          <SectionHeader title="articles section">
             <ArticleThumb articleData={mockData[0]} />
             <ArticleThumb articleData={mockData[6]} />
           </SectionHeader>
