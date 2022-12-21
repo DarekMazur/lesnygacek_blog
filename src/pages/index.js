@@ -6,6 +6,7 @@ import Icon from '../Components/Atoms/Icon/Icon';
 import MenuListItem from '../Components/Atoms/MenuListItem/MenuListItem';
 import Title from '../Components/Atoms/Title/Title';
 import ArticleThumb from '../Components/Molecules/ArticleThumb/ArticleThumb';
+import InstaThumb from '../Components/Molecules/InstaThumb/InstaThumb';
 import MenuList from '../Components/Molecules/MenuList/MenuList';
 import SectionHeader from '../Components/Molecules/SectionHeader/SectionHeader';
 import Layout from '../Components/Templates/Layout/Layout';
@@ -55,8 +56,10 @@ const IndexPage = () => {
 
           <SectionHeader title="articles section">
             <ArticleThumb articleData={mockData[0]} />
-            <ArticleThumb articleData={mockData[6]} />
+            <ArticleThumb articleData={mockData[3]} />
           </SectionHeader>
+
+          <InstaThumb />
 
           <div>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />
