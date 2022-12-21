@@ -9,6 +9,7 @@ import ArticleThumb from '../Components/Molecules/ArticleThumb/ArticleThumb';
 import MenuList from '../Components/Molecules/MenuList/MenuList';
 import SectionHeader from '../Components/Molecules/SectionHeader/SectionHeader';
 import Layout from '../Components/Templates/Layout/Layout';
+import { mockData } from '../data/mockData';
 import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
 
@@ -45,9 +46,16 @@ const IndexPage = () => {
             <Category category="thoughts" light />
             <Category category="others" light />
           </div>
+          <div>
+            <Category category="tools" />
+            <Category category="trips" />
+            <Category category="thoughts" />
+            <Category category="others" />
+          </div>
 
-          <SectionHeader title={'Lorem Ipsum Dolor'}>
-            <ArticleThumb />
+          <SectionHeader title={mockData[0].title}>
+            <ArticleThumb articleData={mockData[0]} />
+            <ArticleThumb articleData={mockData[6]} />
           </SectionHeader>
 
           <div>
@@ -113,7 +121,7 @@ const IndexPage = () => {
             <Button primaryText={'Click me!'} secondaryText={'Go on!'} light />
           </div>
 
-          <SectionHeader title={'Lorem Ipsum Dolor'} options={['right', 'light']}>
+          <SectionHeader title={mockData[0].title} options={['right', 'light']}>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />
             <div>
               <Button primaryText={'Click me!'} secondaryText={'Success!'} loadingText={'Loading!'} />

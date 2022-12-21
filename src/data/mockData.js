@@ -1,11 +1,11 @@
-const mockData = [
+export const mockData = [
   {
     id: '#00001',
     title: 'Lorem Ipsum',
     createdAt: '2022-08-02T06:09:17.635Z',
     publishedAt: '2022-08-02T12:01:28.266Z',
     modifiedAt: '2022-08-02T12:01:28.427Z',
-    category: 'cat1',
+    category: 'tools',
     image:
       'https://images.unsplash.com/photo-1671087078747-cf4af4f4db49?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
     slug: 'lorm-ipsum',
@@ -38,7 +38,7 @@ const mockData = [
     createdAt: '2022-08-01T11:00:33.667Z',
     publishedAt: '2022-08-01T23:02:14.416Z',
     modifiedAt: '2022-08-01T23:23:54.347Z',
-    category: 'cat1',
+    category: 'tools',
     image:
       'https://images.unsplash.com/photo-1671087078747-cf4af4f4db49?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
     slug: 'dolor',
@@ -70,7 +70,7 @@ const mockData = [
     createdAt: '2022-07-26T09:30:50.302Z',
     publishedAt: '2022-07-26T09:30:53.230Z',
     modifiedAt: '2022-07-26T09:30:53.385Z',
-    category: 'cat3',
+    category: 'others',
     image:
       'https://images.unsplash.com/photo-1671087078747-cf4af4f4db49?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
     slug: 'sit-amet',
@@ -104,7 +104,7 @@ const mockData = [
     createdAt: '2022-07-22T06:20:31.574Z',
     publishedAt: '2022-07-22T06:31:07.821Z',
     modifiedAt: '2022-07-22T06:31:07.992Z',
-    category: 'cat2',
+    category: 'trips',
     image:
       'https://images.unsplash.com/photo-1671087078747-cf4af4f4db49?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
     slug: 'in-de-ac-substantia',
@@ -136,7 +136,7 @@ const mockData = [
     createdAt: '2022-07-26T09:30:50.302Z',
     publishedAt: '2022-07-26T09:30:53.230Z',
     modifiedAt: '2022-07-26T09:30:53.385Z',
-    category: 'cat2',
+    category: 'trips',
     image:
       'https://images.unsplash.com/photo-1671087078747-cf4af4f4db49?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
     slug: 'progressus-praesertim-quantumvis',
@@ -168,7 +168,7 @@ const mockData = [
     createdAt: '2022-07-22T06:20:31.574Z',
     publishedAt: '2022-07-22T06:31:07.821Z',
     modifiedAt: '2022-07-22T06:31:07.992Z',
-    category: 'cat4',
+    category: 'thoughts',
     image:
       'https://images.unsplash.com/photo-1671087078747-cf4af4f4db49?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
     slug: 'argumentis-efficiente-ita-ibi-distinctae',
@@ -201,7 +201,7 @@ const mockData = [
     createdAt: '2022-07-06T13:03:16.281Z',
     publishedAt: '2022-07-18T07:36:30.236Z',
     modifiedAt: '2022-07-19T21:10:18.782Z',
-    category: 'cat3',
+    category: 'others',
     image:
       'https://images.unsplash.com/photo-1671087078747-cf4af4f4db49?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
     slug: 'dari-boni-co-vi-anno',
