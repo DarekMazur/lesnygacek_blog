@@ -7,7 +7,7 @@ const InstaThumb = ({ imgUrl, count }) => {
     <StyledInstaThumb>
       <img src={imgUrl} />
       <div>
-        <Icon icon={'fa'} iconType={['fas', 'heart']} size="default" /> {count}
+        <Icon icon={'fa'} iconType={['fas', 'heart']} size="default" nhover /> {count}
       </div>
     </StyledInstaThumb>
   );

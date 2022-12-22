@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { StyledIcon } from './Icon.styles';
 import { customIcon } from '../../../utils/helpers/customIcon';
 
-const Icon = ({ icon, iconType, light, size }) => {
+const Icon = ({ icon, iconType, light, size, nhover }) => {
   return (
-    <StyledIcon light={light} size={size} data-testid={iconType}>
+    <StyledIcon light={light} size={size} data-testid={iconType} nhover={nhover}>
       {icon && icon === 'fa' ? <FontAwesomeIcon data-testid={icon} icon={iconType} /> : customIcon[iconType]}
     </StyledIcon>
   );

@@ -13,6 +13,6 @@ export const StyledIcon = styled.span`
   }
 
   &:hover {
-    color: ${({ theme, light }) => (light ? theme.colors.brown : theme.colors.lightGreen)};
+    color: ${({ theme, light, nhover }) => (nhover ? 'inherit' : light ? theme.colors.brown : theme.colors.lightGreen)};
   }
 `;
