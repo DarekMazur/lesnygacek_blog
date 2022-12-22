@@ -4,7 +4,7 @@ export const StyledMenuListItem = styled.li`
   font-family: ${({ theme }) => theme.fonts.subheader};
   font-size: ${({ theme }) => theme.fontSize.l};
   font-weight: ${({ theme }) => theme.fontWeight.bold};
-  width: 40rem;
+  width: ${({ social }) => (social ? '6rem' : '15rem')};
   color: ${({ theme, social, light }) => (social ? 'inherit' : light ? theme.colors.white : theme.colors.dark)};
   transform-origin: center;
   transition: 150ms transform ease-in, 150ms color ease-in;

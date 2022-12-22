@@ -2,25 +2,26 @@ import React from 'react';
 import Logo from '../../Atoms/Logo/Logo';
 import MenuListItem from '../../Atoms/MenuListItem/MenuListItem';
 import MenuList from '../../Molecules/MenuList/MenuList';
+import { StyledHeder } from './Header.styles';
 
 const Header = () => {
   return (
-    <header>
+    <StyledHeder>
       <Logo logo={'long'} />
       <MenuList>
-        <MenuListItem>Item</MenuListItem>
-        <MenuListItem>Item</MenuListItem>
-        <MenuListItem>Item</MenuListItem>
+        <MenuListItem light>Item</MenuListItem>
+        <MenuListItem light>Item</MenuListItem>
+        <MenuListItem light>Item</MenuListItem>
       </MenuList>
       <div>
         search
         <MenuList>
-          <MenuListItem social="youtube" />
-          <MenuListItem social="instagram" />
-          <MenuListItem social="facebook" />
+          <MenuListItem light social="youtube" />
+          <MenuListItem light social="instagram" />
+          <MenuListItem light social="facebook" />
         </MenuList>
       </div>
-    </header>
+    </StyledHeder>
   );
 };
 
