@@ -1,7 +1,6 @@
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
-import Icon from '../../Atoms/Icon/Icon';
 import ArticleDetails from '../ArticleDetails/ArticleDetails';
 import { StyledArticleThumb } from './ArticleThumb.style';
 

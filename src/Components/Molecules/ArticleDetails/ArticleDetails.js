@@ -5,7 +5,7 @@ import { StyledArticleDetails } from './ArticelDetails.styles';
 
 const ArticleDetails = ({ date, title, category }) => {
   return (
-    <StyledArticleDetails>
+    <StyledArticleDetails data-testid={title}>
       {date}
       <Title sub>{title}</Title>
       <Category category={category} />
