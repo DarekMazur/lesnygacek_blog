@@ -11,6 +11,7 @@ import MenuList from '../Components/Molecules/MenuList/MenuList';
 import SectionHeader from '../Components/Molecules/SectionHeader/SectionHeader';
 import Layout from '../Components/Templates/Layout/Layout';
 import { mockData } from '../data/mockData';
+import { mockInsta } from '../data/mockInsta';
 import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
 
@@ -59,7 +60,14 @@ const IndexPage = () => {
             <ArticleThumb articleData={mockData[3]} />
           </SectionHeader>
 
-          <InstaThumb />
+          <SectionHeader title="Insta section">
+            <InstaThumb imgUrl={mockInsta[0].media_url} count={mockInsta[0].like_count} />
+            <InstaThumb imgUrl={mockInsta[1].media_url} count={mockInsta[1].like_count} />
+            <InstaThumb imgUrl={mockInsta[2].media_url} count={mockInsta[2].like_count} />
+            <InstaThumb imgUrl={mockInsta[3].media_url} count={mockInsta[3].like_count} />
+            <InstaThumb imgUrl={mockInsta[4].media_url} count={mockInsta[4].like_count} />
+            <InstaThumb imgUrl={mockInsta[5].media_url} count={mockInsta[5].like_count} />
+          </SectionHeader>
 
           <div>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />
