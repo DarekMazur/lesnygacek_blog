@@ -60,7 +60,7 @@ const IndexPage = () => {
             <ArticleThumb articleData={mockData[3]} />
           </SectionHeader>
 
-          <SectionHeader title="Insta section">
+          <SectionHeader title="Insta section" options={['right', 'light']}>
             <InstaThumb imgUrl={mockInsta[0].media_url} count={mockInsta[0].like_count} />
             <InstaThumb imgUrl={mockInsta[1].media_url} count={mockInsta[1].like_count} />
             <InstaThumb imgUrl={mockInsta[2].media_url} count={mockInsta[2].like_count} />
