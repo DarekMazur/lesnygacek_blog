@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../../Atoms/Logo/Logo';
 import Copyright from '../../Molecules/Copyright/Copyright';
+import Footer from '../../Organisms/Footer/Footer';
 import Header from '../../Organisms/Header/Header';
 
 const Layout = ({ children }) => {
@@ -16,10 +17,7 @@ const Layout = ({ children }) => {
       </header> */}
       <Header />
       {children}
-      <footer style={{ backgroundColor: '#93806F' }}>
-        <Copyright pageCopy />
-        <Copyright />
-      </footer>
+      <Footer />
     </>
   );
 };
