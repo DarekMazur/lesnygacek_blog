@@ -2,6 +2,7 @@ import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
 import Button from '../Components/Atoms/Button/Button';
 import Category from '../Components/Atoms/Category/Category';
+import CustomLink from '../Components/Atoms/CustomLink/CustomLink';
 import Icon from '../Components/Atoms/Icon/Icon';
 import MenuListItem from '../Components/Atoms/MenuListItem/MenuListItem';
 import Title from '../Components/Atoms/Title/Title';
@@ -35,6 +36,8 @@ const IndexPage = () => {
               Lorem Ipsum dolor sit amet
             </Title>
           </div>
+
+          <CustomLink url="/" link="Link" />
 
           <div>
             <Category category="tools" />
