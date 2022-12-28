@@ -1,9 +1,19 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Leśny Gacek`,
     siteUrl: `https://www.lesnygacek.pl`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-custom`,
+      options: {
+        apiKey: process.env.API_KEY,
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
