@@ -1,6 +1,6 @@
 import React from 'react';
-import Logo from '../../Atoms/Logo/Logo';
-import Copyright from '../../Molecules/Copyright/Copyright';
+// import Logo from '../../Atoms/Logo/Logo';
+// import Copyright from '../../Molecules/Copyright/Copyright';
 import Footer from '../../Organisms/Footer/Footer';
 import Header from '../../Organisms/Header/Header';
 
