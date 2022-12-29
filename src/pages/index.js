@@ -54,9 +54,7 @@ const IndexPage = () => {
         <CenterDiv>
           <h1>Witaj u Leśnego Gacka!</h1>
           <Border />
-          <Paragraph>
-            serdeczne dzięki za odwiedziny, ale obóz jeszcze nie jest rozbity 🏕️
-          </Paragraph>
+          <Paragraph>serdeczne dzięki za odwiedziny, ale obóz jeszcze nie jest rozbity 🏕️</Paragraph>
         </CenterDiv>
       </Main>
     </>
