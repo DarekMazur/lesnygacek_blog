@@ -1,6 +1,7 @@
 import React from 'react';
 import { year } from '../../../utils/helpers/date';
 import Logo from '../../Atoms/Logo/Logo';
+import CustomLink from '../../Atoms/CustomLink/CustomLink';
 import { StyledCopyright } from './Copyright.styles';
 
 const Copyright = ({ pageCopy }) => {
@@ -14,7 +15,9 @@ const Copyright = ({ pageCopy }) => {
           &copy; {year}
         </>
       ) : (
-        <p>created by Nerdistry</p>
+        <p>
+          created by <CustomLink url="https://nerdistry.pl" link="Nerdistry" />
+        </p>
       )}
     </StyledCopyright>
   );
