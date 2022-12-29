@@ -8,12 +8,6 @@ module.exports = {
     siteUrl: `https://www.lesnygacek.pl`,
   },
   plugins: [
-    // {
-    //   resolve: `gatsby-source-custom`,
-    //   options: {
-    //     apiKey: process.env.API_KEY,
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

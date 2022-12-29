@@ -17,14 +17,21 @@ import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
 
 const IndexPage = () => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
       const result = await fetch(
-        `https://graph.facebook.com/v15.0/${process.env.GATSBY_IG_USER}/media?fields=id,media_type,media_url,like_count&limit=6&access_token=${process.env.GATSBY_IG_KEY}`
+        `https://graph.facebook.com/v15.0/${process.env.GATSBY_IG_USER}/media?fields=id,media_type,media_url,shortcode,like_count&limit=6&access_token=${process.env.GATSBY_IG_KEY}`
       ).then((res) => res.json());
-      setData(result);
+      try {
+        console.log(result.data);
+        result.data != undefined;
+        setData(result.data);
+      } catch (error) {
+        setData([]);
+        console.log('error!!!');
+      }
     }
     fetchData();
   }, []);
@@ -75,11 +82,13 @@ const IndexPage = () => {
             <ArticleThumb articleData={mockData[3]} />
           </SectionHeader>
 
-          <SectionHeader title="Insta section" options={['right', 'light']}>
-            {data.data.map((item) => (
-              <InstaThumb key={item.id} imgUrl={item.media_url} count={item.like_count} />
-            ))}
-          </SectionHeader>
+          {data ? (
+            <SectionHeader title="Insta section" options={['right', 'light']}>
+              {data.map((item) => (
+                <InstaThumb key={item.id} imgUrl={item.media_url} count={item.like_count} link={item.shortcode} />
+              ))}
+            </SectionHeader>
+          ) : null}
 
           <div>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />
