@@ -11,6 +11,7 @@ import { ThemeProvider } from 'styled-components';
 import ArticleThumb from '../Components/Molecules/ArticleThumb/ArticleThumb';
 import InstaThumb from '../Components/Molecules/InstaThumb/InstaThumb';
 import SectionHeader from '../Components/Molecules/SectionHeader/SectionHeader';
+import InstaGrid from '../Components/Organisms/InstaGrid/InstaGrid';
 import Layout from '../Components/Templates/Layout/Layout';
 import { mockData } from '../data/mockData';
 import { GlobalStyle } from '../styles/globalStyle';
@@ -77,9 +78,7 @@ const IndexPage = () => {
 
           {data ? (
             <SectionHeader title="Insta section" options={['right', 'light']}>
-              {data.map((item) => (
-                <InstaThumb key={item.id} imgUrl={item.media_url} count={item.like_count} link={item.shortcode} />
-              ))}
+              <InstaGrid data={data} />
             </SectionHeader>
           ) : null}
 
