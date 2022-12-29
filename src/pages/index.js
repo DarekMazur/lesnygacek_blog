@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
-import Button from '../Components/Atoms/Button/Button';
-import Category from '../Components/Atoms/Category/Category';
-import CustomLink from '../Components/Atoms/CustomLink/CustomLink';
-import Icon from '../Components/Atoms/Icon/Icon';
-import MenuListItem from '../Components/Atoms/MenuListItem/MenuListItem';
-import Title from '../Components/Atoms/Title/Title';
+// import Button from '../Components/Atoms/Button/Button';
+// import Category from '../Components/Atoms/Category/Category';
+// import CustomLink from '../Components/Atoms/CustomLink/CustomLink';
+// import Icon from '../Components/Atoms/Icon/Icon';
+// import MenuListItem from '../Components/Atoms/MenuListItem/MenuListItem';
+// import Title from '../Components/Atoms/Title/Title';
+// import MenuList from '../Components/Molecules/MenuList/MenuList';
 import ArticleThumb from '../Components/Molecules/ArticleThumb/ArticleThumb';
 import InstaThumb from '../Components/Molecules/InstaThumb/InstaThumb';
-import MenuList from '../Components/Molecules/MenuList/MenuList';
 import SectionHeader from '../Components/Molecules/SectionHeader/SectionHeader';
 import Layout from '../Components/Templates/Layout/Layout';
 import { mockData } from '../data/mockData';
@@ -24,14 +24,7 @@ const IndexPage = () => {
       const result = await fetch(
         `https://graph.facebook.com/v15.0/${process.env.GATSBY_IG_USER}/media?fields=id,media_type,media_url,shortcode,like_count&limit=6&access_token=${process.env.GATSBY_IG_KEY}`
       ).then((res) => res.json());
-      try {
-        console.log(result.data);
-        result.data != undefined;
-        setData(result.data);
-      } catch (error) {
-        setData([]);
-        console.log('error!!!');
-      }
+      setData(result.data);
     }
     fetchData();
   }, []);
@@ -41,7 +34,7 @@ const IndexPage = () => {
       <GlobalStyle />
       <Layout>
         <main>
-          <div>
+          {/* <div>
             <Title>Lorem Ipsum dolor sit amet</Title>
           </div>
           <div style={{ backgroundColor: '#444' }}>
@@ -75,7 +68,7 @@ const IndexPage = () => {
             <Category category="trips" />
             <Category category="thoughts" />
             <Category category="others" />
-          </div>
+          </div> */}
 
           <SectionHeader title="articles section">
             <ArticleThumb articleData={mockData[0]} />
@@ -90,7 +83,7 @@ const IndexPage = () => {
             </SectionHeader>
           ) : null}
 
-          <div>
+          {/* <div>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />
             <Icon icon={'fa'} iconType={['fab', 'youtube']} size="medium" />
             <Icon icon={'fa'} iconType={['fab', 'facebook-f']} size="small" />
@@ -164,7 +157,7 @@ const IndexPage = () => {
             <div>
               <Button primaryText={'Click me!'} secondaryText={'Success!'} loadingText={'Loading!'} light />
             </div>
-          </SectionHeader>
+          </SectionHeader> */}
         </main>
       </Layout>
     </ThemeProvider>
