@@ -71,17 +71,16 @@ const IndexPage = () => {
             <Category category="others" />
           </div> */}
 
-          <SectionHeader title="articles section">
+          {/* rename SectionHeader to SectionWrapper */}
+          <SectionHeader title="Ostatnie artukuły">
             <ArticleThumb articleData={mockData[0]} />
             <ArticleThumb articleData={mockData[3]} />
           </SectionHeader>
-
           {data ? (
-            <SectionHeader title="Insta section" options={['right', 'light']}>
+            <SectionHeader title="Rzuć okiem na Insta" options={['right', 'light']}>
               <InstaGrid data={data} />
             </SectionHeader>
           ) : null}
-
           {/* <div>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />
             <Icon icon={'fa'} iconType={['fab', 'youtube']} size="medium" />
