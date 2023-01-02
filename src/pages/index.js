@@ -36,6 +36,29 @@ const IndexPage = () => {
               adipiscing enim eros sed nec. Euismod blandit sapien viverra velit neque sed.
             </P>
           </SectionWrapper>
+
+          <SectionWrapper title="Ostatnie artukuły">
+            <ArticleThumb articleData={mockData[0]} />
+            <ArticleThumb articleData={mockData[3]} />
+          </SectionWrapper>
+
+          {data ? (
+            <SectionWrapper title="Rzuć okiem na Insta" options={['right', 'light']}>
+              <InstaGrid data={data} />
+            </SectionWrapper>
+          ) : null}
+
+          <SectionWrapper title="O mnie słów kilka" contentWidth="60%" align={{ align: 'center' }}>
+            <P options={{ color: 'white' }}>
+              Lorem ipsum dolor sit amet consectetur. Dictum viverra fermentum libero tortor facilisis velit posuere. Dolor facilisi morbi tellus quam
+              lorem feugiat ut pellentesque. Non justo fermentum sed elit ac pellentesque facilisis. Praesent tristique leo eros commodo turpis. Urna
+              turpis habitasse etiam et. Pretium eu nisl tortor ipsum rhoncus platea eu sollicitudin nulla. Magna pharetra facilisis eget ipsum
+              egestas et semper lacus sit. Tincidunt habitant feugiat adipiscing ultrices varius lectus felis mauris. Elementum ut libero commodo a
+              porttitor mattis semper. Orci dolor consectetur sed fringilla iaculis faucibus enim. Quis faucibus massa diam non viverra lobortis massa
+              et. Adipiscing vulputate leo lectus massa leo leo pellentesque aliquet.
+            </P>
+            <Avatar />
+          </SectionWrapper>
           {/* <div>
             <Title>Lorem Ipsum dolor sit amet</Title>
           </div>
@@ -72,27 +95,6 @@ const IndexPage = () => {
             <Category category="others" />
           </div> */}
 
-          {/* rename SectionWrapper to SectionWrapper */}
-          <SectionWrapper title="Ostatnie artukuły">
-            <ArticleThumb articleData={mockData[0]} />
-            <ArticleThumb articleData={mockData[3]} />
-          </SectionWrapper>
-          {data ? (
-            <SectionWrapper title="Rzuć okiem na Insta" options={['right', 'light']}>
-              <InstaGrid data={data} />
-            </SectionWrapper>
-          ) : null}
-          <SectionWrapper title="O mnie słów kilka" contentWidth="60%" align={{ align: 'center' }}>
-            <P options={{ color: 'white' }}>
-              Lorem ipsum dolor sit amet consectetur. Dictum viverra fermentum libero tortor facilisis velit posuere. Dolor facilisi morbi tellus quam
-              lorem feugiat ut pellentesque. Non justo fermentum sed elit ac pellentesque facilisis. Praesent tristique leo eros commodo turpis. Urna
-              turpis habitasse etiam et. Pretium eu nisl tortor ipsum rhoncus platea eu sollicitudin nulla. Magna pharetra facilisis eget ipsum
-              egestas et semper lacus sit. Tincidunt habitant feugiat adipiscing ultrices varius lectus felis mauris. Elementum ut libero commodo a
-              porttitor mattis semper. Orci dolor consectetur sed fringilla iaculis faucibus enim. Quis faucibus massa diam non viverra lobortis massa
-              et. Adipiscing vulputate leo lectus massa leo leo pellentesque aliquet.
-            </P>
-            <Avatar />
-          </SectionWrapper>
           {/* <div>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />
             <Icon icon={'fa'} iconType={['fab', 'youtube']} size="medium" />
