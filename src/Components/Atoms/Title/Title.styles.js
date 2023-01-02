@@ -37,11 +37,11 @@ export const StyledTitle = styled.div`
     }
 
     &:hover::after {
-      transform: translate(3rem) scaleY(1.1);
+      transform: translate(1.5rem) scaleY(1.1);
     }
 
     &:hover::before {
-      transform: translate(-3rem) scaleY(1.1);
+      transform: translate(-1.5rem) scaleY(1.1);
     }
   }
 `;
