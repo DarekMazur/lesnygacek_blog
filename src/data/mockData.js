@@ -1,7 +1,7 @@
 export const mockData = [
   {
     id: '#00001',
-    title: 'Lorem Ipsum',
+    title: 'zażółć gęślą jaźń',
     createdAt: '2022-08-02T06:09:17.635Z',
     publishedAt: '2022-08-02T12:01:28.266Z',
     modifiedAt: '2022-08-02T12:01:28.427Z',

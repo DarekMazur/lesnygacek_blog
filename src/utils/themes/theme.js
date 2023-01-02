@@ -9,7 +9,7 @@ export const theme = {
 
   fonts: {
     main: '"Montserrat", sans-serif',
-    header: '"Holtwood One SC", serif',
+    header: '"Playfair Display SC", serif',
     subheader: '"Cormorant Unicase", serif',
   },
 

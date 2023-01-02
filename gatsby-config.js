@@ -63,8 +63,8 @@ module.exports = {
             variable: ['ital'],
           },
           {
-            family: 'Holtwood One SC',
-            weights: ['400'],
+            family: 'Playfair Display SC',
+            weights: ['700'],
           },
           {
             family: 'Cormorant Unicase',

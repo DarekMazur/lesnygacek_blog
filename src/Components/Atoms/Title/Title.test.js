@@ -13,7 +13,7 @@ const subContainer = renderWithProvider(
 
 describe('Render Title:', () => {
   it('- font family:', () => {
-    expect(screen.getByText('Title')).toHaveStyle('font-family: "Holtwood One SC",serif');
+    expect(screen.getByText('Title')).toHaveStyle('font-family: "Playfair Display SC",serif');
   });
 
   it('- font size:', () => {
