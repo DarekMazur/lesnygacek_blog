@@ -4,16 +4,8 @@ import { ThemeProvider } from 'styled-components';
 import Avatar from '../Components/Atoms/Avatar/Avatar';
 import { P } from '../Components/Atoms/P/P.styles';
 import { Span } from '../Components/Atoms/Span/Span.styles';
-// import Button from '../Components/Atoms/Button/Button';
-// import Category from '../Components/Atoms/Category/Category';
-// import CustomLink from '../Components/Atoms/CustomLink/CustomLink';
-// import Icon from '../Components/Atoms/Icon/Icon';
-// import MenuListItem from '../Components/Atoms/MenuListItem/MenuListItem';
-// import Title from '../Components/Atoms/Title/Title';
-// import MenuList from '../Components/Molecules/MenuList/MenuList';
-// import InstaThumb from '../Components/Molecules/InstaThumb/InstaThumb';
 import ArticleThumb from '../Components/Molecules/ArticleThumb/ArticleThumb';
-import SectionHeader from '../Components/Molecules/SectionHeader/SectionHeader';
+import SectionWrapper from '../Components/Molecules/SectionWrapper/SectionWrapper';
 import InstaGrid from '../Components/Organisms/InstaGrid/InstaGrid';
 import Layout from '../Components/Templates/Layout/Layout';
 import { mockData } from '../data/mockData';
@@ -38,12 +30,12 @@ const IndexPage = () => {
       <GlobalStyle />
       <Layout>
         <main>
-          <SectionHeader title="Bushcrafty, bushcrafty" options={['right', 'light']}>
+          <SectionWrapper title="Bushcrafty, bushcrafty" options={['right', 'light']}>
             <P options={{ size: 'xl', weight: 'fat', justify: 'center' }}>
               <Span color={'brown'}>Lorem ipsum dolor sit amet consectetur.</Span> Dignissim felis sit integer cursus mattis nascetur ut. Dapibus
               adipiscing enim eros sed nec. Euismod blandit sapien viverra velit neque sed.
             </P>
-          </SectionHeader>
+          </SectionWrapper>
           {/* <div>
             <Title>Lorem Ipsum dolor sit amet</Title>
           </div>
@@ -80,17 +72,17 @@ const IndexPage = () => {
             <Category category="others" />
           </div> */}
 
-          {/* rename SectionHeader to SectionWrapper */}
-          <SectionHeader title="Ostatnie artukuły">
+          {/* rename SectionWrapper to SectionWrapper */}
+          <SectionWrapper title="Ostatnie artukuły">
             <ArticleThumb articleData={mockData[0]} />
             <ArticleThumb articleData={mockData[3]} />
-          </SectionHeader>
+          </SectionWrapper>
           {data ? (
-            <SectionHeader title="Rzuć okiem na Insta" options={['right', 'light']}>
+            <SectionWrapper title="Rzuć okiem na Insta" options={['right', 'light']}>
               <InstaGrid data={data} />
-            </SectionHeader>
+            </SectionWrapper>
           ) : null}
-          <SectionHeader title="O mnie słów kilka" contentWidth="60%" align={{ align: 'center' }}>
+          <SectionWrapper title="O mnie słów kilka" contentWidth="60%" align={{ align: 'center' }}>
             <P options={{ color: 'white' }}>
               Lorem ipsum dolor sit amet consectetur. Dictum viverra fermentum libero tortor facilisis velit posuere. Dolor facilisi morbi tellus quam
               lorem feugiat ut pellentesque. Non justo fermentum sed elit ac pellentesque facilisis. Praesent tristique leo eros commodo turpis. Urna
@@ -100,7 +92,7 @@ const IndexPage = () => {
               et. Adipiscing vulputate leo lectus massa leo leo pellentesque aliquet.
             </P>
             <Avatar />
-          </SectionHeader>
+          </SectionWrapper>
           {/* <div>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />
             <Icon icon={'fa'} iconType={['fab', 'youtube']} size="medium" />
@@ -164,18 +156,18 @@ const IndexPage = () => {
             <Button primaryText={'Click me!'} secondaryText={'Go on!'} light />
           </div>
 
-          <SectionHeader title={mockData[0].title} options={['right', 'light']}>
+          <SectionWrapper title={mockData[0].title} options={['right', 'light']}>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />
             <div>
               <Button primaryText={'Click me!'} secondaryText={'Success!'} loadingText={'Loading!'} />
             </div>
-          </SectionHeader>
-          <SectionHeader title={'Dolor Sit Amet'} light>
+          </SectionWrapper>
+          <SectionWrapper title={'Dolor Sit Amet'} light>
             <Icon icon={'fa'} iconType={['fab', 'facebook-f']} size="default" light />
             <div>
               <Button primaryText={'Click me!'} secondaryText={'Success!'} loadingText={'Loading!'} light />
             </div>
-          </SectionHeader> */}
+          </SectionWrapper> */}
         </main>
       </Layout>
     </ThemeProvider>

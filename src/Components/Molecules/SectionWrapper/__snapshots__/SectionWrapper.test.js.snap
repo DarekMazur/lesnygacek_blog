@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render component SectionHeader - rendered component match to snapshot: 1`] = `
+exports[`Render component SectionWrapper - rendered component match to snapshot: 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body />,

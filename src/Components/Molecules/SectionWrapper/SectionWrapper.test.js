@@ -2,20 +2,20 @@ import { screen } from '@testing-library/dom';
 import '@testing-library/jest-dom';
 import React from 'react';
 import { renderWithProvider } from '../../../utils/helpers/renderWithProvider';
-import SectionHeader from './SectionHeader';
+import SectionWrapper from './SectionWrapper';
 
 const container = renderWithProvider(
-  <SectionHeader title={'Dolor Sit Amet'}>
+  <SectionWrapper title={'Dolor Sit Amet'}>
     <div>
       <p>Lorem Ipsum Dolor Sita Amet</p>
     </div>
-  </SectionHeader>
+  </SectionWrapper>
 );
 
-describe('Render component SectionHeader', () => {
+describe('Render component SectionWrapper', () => {
   it('- componenet contains props:', () => {
-    expect(screen.getByTestId('sectionHeader')).toContainHTML('</h3>');
-    expect(screen.getByTestId('sectionHeader')).toContainHTML('Lorem Ipsum');
+    expect(screen.getByTestId('SectionWrapper')).toContainHTML('</h3>');
+    expect(screen.getByTestId('SectionWrapper')).toContainHTML('Lorem Ipsum');
   });
   it('- rendered component match to snapshot:', () => {
     expect(container).toMatchSnapshot();

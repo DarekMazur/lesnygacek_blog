@@ -1,17 +1,17 @@
 import React from 'react';
 import Title from '../../Atoms/Title/Title';
 import Wrapper from '../Wrapper/Wrapper';
-import { StyledSectionHeader } from './SectionHeader.styles';
+import { StyledSectionWrapper } from './SectionWrapper.styles';
 
-const SectionHeader = ({ title, options, contentWidth, children }) => {
+const SectionWrapper = ({ title, options, contentWidth, children }) => {
   return (
-    <StyledSectionHeader data-testid="sectionHeader" light={options?.[1]} position={options?.[0]}>
+    <StyledSectionWrapper data-testid="SectionWrapper" light={options?.[1]} position={options?.[0]}>
       <Title light={options?.[1] && options?.[1] === 'light' ? false : true}>{title}</Title>
       <Wrapper justify="center" align="start" contentWidth={contentWidth}>
         {children}
       </Wrapper>
-    </StyledSectionHeader>
+    </StyledSectionWrapper>
   );
 };
 
-export default SectionHeader;
+export default SectionWrapper;

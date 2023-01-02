@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledSectionHeader = styled.section`
+export const StyledSectionWrapper = styled.section`
   display: flex;
   flex-direction: ${({ position }) => (position && position === 'right' ? 'row-reverse' : 'row')};
   justify-content: space-between;
