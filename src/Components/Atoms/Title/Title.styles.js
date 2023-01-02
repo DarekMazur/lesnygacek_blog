@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const StyledTitle = styled.div`
   margin: ${({ sub }) => (sub ? `1rem` : `4rem`)};
   padding: 1rem;
-  max-width: 45rem;
+  ${'' /* min-width: 25rem; */}
+  ${'' /* max-width: 45rem; */}
   text-align: center;
 
   h3 {

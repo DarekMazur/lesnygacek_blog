@@ -7,7 +7,7 @@ const SectionHeader = ({ title, options, children }) => {
   return (
     <StyledSectionHeader data-testid="sectionHeader" light={options?.[1]} position={options?.[0]}>
       <Title light={options?.[1] && options?.[1] === 'light' ? false : true}>{title}</Title>
-      <Wrapper justify="center" align="start" width="calc(100vw - 15rem)">
+      <Wrapper justify="center" align="start" width="70%">
         {children}
       </Wrapper>
     </StyledSectionHeader>
