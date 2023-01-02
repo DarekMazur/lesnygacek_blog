@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { P } from '../Components/Atoms/P/P.styles';
+import { Span } from '../Components/Atoms/Span/Span.styles';
 // import Button from '../Components/Atoms/Button/Button';
 // import Category from '../Components/Atoms/Category/Category';
 // import CustomLink from '../Components/Atoms/CustomLink/CustomLink';
@@ -38,8 +39,8 @@ const IndexPage = () => {
         <main>
           <SectionHeader title="Bushcrafty, bushcrafty" options={['right', 'light']}>
             <P options={{ size: 'xl', weight: 'fat', justify: 'center' }}>
-              Lorem ipsum dolor sit amet consectetur. Dignissim felis sit integer cursus mattis nascetur ut. Dapibus adipiscing enim eros sed nec.
-              Euismod blandit sapien viverra velit neque sed.
+              <Span color={'brown'}>Lorem ipsum dolor sit amet consectetur.</Span> Dignissim felis sit integer cursus mattis nascetur ut. Dapibus
+              adipiscing enim eros sed nec. Euismod blandit sapien viverra velit neque sed.
             </P>
           </SectionHeader>
           {/* <div>
