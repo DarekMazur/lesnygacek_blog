@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
+import Avatar from '../Components/Atoms/Avatar/Avatar';
 import { P } from '../Components/Atoms/P/P.styles';
 import { Span } from '../Components/Atoms/Span/Span.styles';
 // import Button from '../Components/Atoms/Button/Button';
@@ -10,8 +11,8 @@ import { Span } from '../Components/Atoms/Span/Span.styles';
 // import MenuListItem from '../Components/Atoms/MenuListItem/MenuListItem';
 // import Title from '../Components/Atoms/Title/Title';
 // import MenuList from '../Components/Molecules/MenuList/MenuList';
+// import InstaThumb from '../Components/Molecules/InstaThumb/InstaThumb';
 import ArticleThumb from '../Components/Molecules/ArticleThumb/ArticleThumb';
-import InstaThumb from '../Components/Molecules/InstaThumb/InstaThumb';
 import SectionHeader from '../Components/Molecules/SectionHeader/SectionHeader';
 import InstaGrid from '../Components/Organisms/InstaGrid/InstaGrid';
 import Layout from '../Components/Templates/Layout/Layout';
@@ -89,7 +90,7 @@ const IndexPage = () => {
               <InstaGrid data={data} />
             </SectionHeader>
           ) : null}
-          <SectionHeader title="O mnie słów kilka" contentWidth="60%">
+          <SectionHeader title="O mnie słów kilka" contentWidth="60%" align={{ align: 'center' }}>
             <P options={{ color: 'white' }}>
               Lorem ipsum dolor sit amet consectetur. Dictum viverra fermentum libero tortor facilisis velit posuere. Dolor facilisi morbi tellus quam
               lorem feugiat ut pellentesque. Non justo fermentum sed elit ac pellentesque facilisis. Praesent tristique leo eros commodo turpis. Urna
@@ -98,7 +99,7 @@ const IndexPage = () => {
               porttitor mattis semper. Orci dolor consectetur sed fringilla iaculis faucibus enim. Quis faucibus massa diam non viverra lobortis massa
               et. Adipiscing vulputate leo lectus massa leo leo pellentesque aliquet.
             </P>
-            <P options={{ color: 'white' }}>Lorem ipsum</P>
+            <Avatar />
           </SectionHeader>
           {/* <div>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />
