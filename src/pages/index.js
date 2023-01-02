@@ -89,7 +89,7 @@ const IndexPage = () => {
               <InstaGrid data={data} />
             </SectionHeader>
           ) : null}
-          <SectionHeader title="O mnie słów kilka">
+          <SectionHeader title="O mnie słów kilka" contentWidth="60%">
             <P options={{ color: 'white' }}>
               Lorem ipsum dolor sit amet consectetur. Dictum viverra fermentum libero tortor facilisis velit posuere. Dolor facilisi morbi tellus quam
               lorem feugiat ut pellentesque. Non justo fermentum sed elit ac pellentesque facilisis. Praesent tristique leo eros commodo turpis. Urna
@@ -98,6 +98,7 @@ const IndexPage = () => {
               porttitor mattis semper. Orci dolor consectetur sed fringilla iaculis faucibus enim. Quis faucibus massa diam non viverra lobortis massa
               et. Adipiscing vulputate leo lectus massa leo leo pellentesque aliquet.
             </P>
+            <P options={{ color: 'white' }}>Lorem ipsum</P>
           </SectionHeader>
           {/* <div>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />

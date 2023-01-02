@@ -11,5 +11,5 @@ export const StyledWrapper = styled.div`
     direction && directionOptions.includes(direction) ? direction : display === 'flex' || !display ? 'row' : null};
   justify-content: ${({ justify }) => (justify && justifyOptions.includes(justify) ? justify : 'center')};
   align-items: ${({ align }) => (align && alignOptions.includes(align) ? align : 'center')};
-  max-width: ${({ width }) => (width ? width : '100%')};
+  max-width: ${({ contentWidth }) => (contentWidth ? contentWidth : '100%')};
 `;
