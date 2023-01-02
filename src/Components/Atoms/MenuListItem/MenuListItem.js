@@ -1,4 +1,5 @@
 import React from 'react';
+import { socialMedia } from '../../../data/socialMedia';
 import Icon from '../Icon/Icon';
 import { StyledMenuListItem } from './MenuListItem.styles';
 
@@ -11,7 +12,13 @@ const MenuListItem = ({ children, social, light }) => {
   };
   return (
     <StyledMenuListItem social={social} light={light} data-testid={social}>
-      {social ? <Icon icon={'fa'} iconType={['fab', socialIconName[social]]} light={light} size="default" /> : children}
+      {social ? (
+        <a href={socialMedia[social]} target="_blank">
+          <Icon icon={'fa'} iconType={['fab', socialIconName[social]]} light={light} size="default" />
+        </a>
+      ) : (
+        children
+      )}
     </StyledMenuListItem>
   );
 };
