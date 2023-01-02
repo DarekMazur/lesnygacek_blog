@@ -35,6 +35,10 @@ const IndexPage = () => {
       <GlobalStyle />
       <Layout>
         <main>
+          <SectionHeader title="Bushcrafty, bushcrafty" options={['right', 'light']}>
+            Lorem ipsum dolor sit amet consectetur. Dignissim felis sit integer cursus mattis nascetur ut. Dapibus adipiscing enim eros sed nec.
+            Euismod blandit sapien viverra velit neque sed.
+          </SectionHeader>
           {/* <div>
             <Title>Lorem Ipsum dolor sit amet</Title>
           </div>
