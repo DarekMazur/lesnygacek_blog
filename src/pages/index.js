@@ -93,9 +93,9 @@ const IndexPage = () => {
             <Category category="trips" />
             <Category category="thoughts" />
             <Category category="others" />
-          </div> */}
-
-          {/* <div>
+          </div>
+          
+          <div>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />
             <Icon icon={'fa'} iconType={['fab', 'youtube']} size="medium" />
             <Icon icon={'fa'} iconType={['fab', 'facebook-f']} size="small" />
