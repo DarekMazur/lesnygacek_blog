@@ -3,11 +3,21 @@ import Category from '../../Atoms/Category/Category';
 import Title from '../../Atoms/Title/Title';
 import { StyledArticleDetails } from './ArticelDetails.styles';
 
-const ArticleDetails = ({ date, title, category }) => {
+const ArticleDetails = ({ date, title, category, sub }) => {
   return (
     <StyledArticleDetails data-testid={title}>
-      {date}
-      <Title sub>{title}</Title>
+      {sub ? (
+        <>
+          {date}
+          <Title sub={sub}>{title}</Title>
+        </>
+      ) : (
+        <>
+          {<Title sub={sub}>{title}</Title>}
+          {date}
+        </>
+      )}
+
       <Category category={category} />
     </StyledArticleDetails>
   );

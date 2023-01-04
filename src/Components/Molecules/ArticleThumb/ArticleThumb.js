@@ -6,7 +6,7 @@ import { StyledArticleThumb } from './ArticleThumb.style';
 
 const ArticleThumb = ({ articleData }) => {
   return (
-    <StyledArticleThumb as={Link} to="/">
+    <StyledArticleThumb as={Link} to="/singlePost">
       <StaticImage
         src="https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
         alt=""
@@ -16,7 +16,7 @@ const ArticleThumb = ({ articleData }) => {
         aspectRatio={4 / 3}
         formats={['auto', 'webp']}
       />
-      <ArticleDetails date={articleData.publishedAt} title={articleData.title} category={articleData.category} />
+      <ArticleDetails date={articleData.publishedAt} title={articleData.title} category={articleData.category} sub />
       <div>{articleData.description}</div>
     </StyledArticleThumb>
   );
