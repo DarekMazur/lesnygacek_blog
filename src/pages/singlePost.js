@@ -7,6 +7,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import { mockData } from '../data/mockData';
 import ArticleDetails from '../Components/Molecules/ArticleDetails/ArticleDetails';
+import Button from '../Components/Atoms/Button/Button';
 
 const SinglePost = () => {
   return (
@@ -24,9 +25,11 @@ const SinglePost = () => {
             formats={['auto', 'webp']}
           />
           <ArticleDetails date={mockData[0].publishedAt} title={mockData[0].title} category={mockData[0].category} />
-          {mockData[0].postBody}
-          <br />
-          pagination
+          <section>{mockData[0].postBody}</section>
+          <section>
+            <Button primaryText={'Previous'} secondaryText={'Go on!'} />
+            <Button primaryText={'Next'} secondaryText={'Go on!'} />
+          </section>
         </main>
       </Layout>
     </ThemeProvider>
