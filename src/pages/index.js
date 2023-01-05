@@ -8,9 +8,10 @@ import ArticleThumb from '../Components/Molecules/ArticleThumb/ArticleThumb';
 import SectionWrapper from '../Components/Molecules/SectionWrapper/SectionWrapper';
 import InstaGrid from '../Components/Organisms/InstaGrid/InstaGrid';
 import Layout from '../Components/Templates/Layout/Layout';
-import { mockData } from '../data/mockData';
 import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
+
+import { mockData } from '../data/mockData';
 
 const IndexPage = () => {
   const [data, setData] = useState([]);
