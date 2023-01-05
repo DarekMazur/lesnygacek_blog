@@ -43,3 +43,5 @@ const SinglePost = () => {
 };
 
 export default SinglePost;
+
+export const Head = () => <title>Single Page</title>;

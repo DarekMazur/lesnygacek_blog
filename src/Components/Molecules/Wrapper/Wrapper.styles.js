@@ -13,5 +13,5 @@ export const StyledWrapper = styled.div`
   justify-content: ${({ align }) => (align?.justify && justifyOptions.includes(align.justify) ? align.justify : 'center')};
   align-items: ${({ align }) => (align?.align && alignOptions.includes(align.align) ? align.align : 'center')};
   max-width: ${({ contentWidth }) => (contentWidth ? contentWidth : '100%')};
-  margin: 3rem;
+  margin: ${({ contentWidth }) => (contentWidth ? null : '3rem')}; ;
 `;
