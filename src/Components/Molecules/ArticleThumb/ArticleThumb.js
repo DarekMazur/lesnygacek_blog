@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
+import { getDescription } from '../../../utils/helpers/getDescription';
 import ArticleDetails from '../ArticleDetails/ArticleDetails';
 import { StyledArticleThumb } from './ArticleThumb.style';
 
@@ -17,7 +18,10 @@ const ArticleThumb = ({ articleData }) => {
         formats={['auto', 'webp']}
       />
       <ArticleDetails date={articleData.publishedAt} title={articleData.title} category={articleData.category} sub />
-      <div>{articleData.description}</div>
+      <div>
+        {getDescription(articleData.description, articleData.postBody)}
+        {}
+      </div>
     </StyledArticleThumb>
   );
 };
