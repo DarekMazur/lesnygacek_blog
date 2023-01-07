@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import { mockMenu } from '../../../data/mockMenu';
 import Logo from '../../Atoms/Logo/Logo';
 import MenuListItem from '../../Atoms/MenuListItem/MenuListItem';
 import MenuList from '../../Molecules/MenuList/MenuList';
@@ -12,9 +13,13 @@ const Header = () => {
         <Logo logo={'long'} />
       </Link>
       <MenuList>
-        <MenuListItem light>Item</MenuListItem>
-        <MenuListItem light>Item</MenuListItem>
-        <MenuListItem light>Item</MenuListItem>
+        {mockMenu.map((item) => (
+          <Link to={item.link}>
+            <MenuListItem key={item.title} light>
+              {item.title}
+            </MenuListItem>
+          </Link>
+        ))}
       </MenuList>
       <div>
         search
