@@ -6,7 +6,6 @@ const justifyOptions = ['start', 'center', 'space-between', 'space-around', 'spa
 const alignOptions = ['stretch', 'center', 'start', 'end'];
 
 export const StyledWrapper = styled.div`
-  ${(props) => console.log({ props })}
   display: ${({ display }) => (display && displayOptions.includes(display) ? display : 'flex')};
   flex-direction: ${({ display, direction }) =>
     direction && directionOptions.includes(direction) ? direction : display === 'flex' || !display ? 'row' : null};
