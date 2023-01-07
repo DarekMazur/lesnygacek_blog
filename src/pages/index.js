@@ -22,8 +22,19 @@ const IndexPage = () => {
     async function fetchData() {
       const result = await fetch(
         `https://graph.facebook.com/v15.0/${process.env.GATSBY_IG_USER}/media?fields=id,media_type,media_url,shortcode,like_count&limit=6&access_token=${process.env.GATSBY_IG_KEY}`
-      ).then((res) => res.json());
-      setData(result.data);
+      )
+        .then((res) => {
+          if (res.ok) {
+            return res.json();
+          }
+          throw new Error('Something went wrong');
+        })
+        .then((result) => {
+          setData(result.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
     fetchData();
   }, []);
