@@ -1,5 +1,5 @@
 export const mockMenu = [
   { title: 'Główna', link: '/' },
-  { title: 'Blog', link: '/' },
-  { title: 'Kontakt', link: '/' },
+  { title: 'Blog', link: '/blog' },
+  { title: 'Kontakt', link: '/contact' },
 ];

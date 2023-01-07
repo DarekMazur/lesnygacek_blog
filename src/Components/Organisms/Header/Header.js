@@ -6,6 +6,12 @@ import MenuListItem from '../../Atoms/MenuListItem/MenuListItem';
 import MenuList from '../../Molecules/MenuList/MenuList';
 import { StyledHeder } from './Header.styles';
 
+const activeNavStyle = {
+  borderBottom: '.5rem solid',
+  marginBottom: '-.5rem',
+  color: 'inherit',
+};
+
 const Header = () => {
   return (
     <StyledHeder>
@@ -14,7 +20,7 @@ const Header = () => {
       </Link>
       <MenuList>
         {mockMenu.map((item) => (
-          <Link to={item.link}>
+          <Link to={item.link} activeStyle={activeNavStyle}>
             <MenuListItem key={item.title} light>
               {item.title}
             </MenuListItem>
