@@ -5,8 +5,8 @@ export const StyledArticleThumb = styled.div`
   position: relative;
   background-color: ${({ theme }) => theme.colors.white};
   padding: 3rem;
-  width: calc((100% - 10rem) / 2);
-  margin: 3rem;
+  width: ${({ width }) => (width ? (width === 'none' ? null : width) : `calc((100% - 10rem) / 2)`)};
+  margin: ${({ home }) => (home ? `3rem` : `0`)};
   color: inherit;
   text-decoration: none;
 

@@ -52,8 +52,9 @@ const IndexPage = () => {
           </SectionWrapper>
 
           <SectionWrapper title="Ostatnie artukuły">
-            <ArticleThumb articleData={mockData[0]} />
-            <ArticleThumb articleData={mockData[3]} />
+            {mockData.slice(0, 2).map((post) => (
+              <ArticleThumb key={post.id} articleData={post} home />
+            ))}
           </SectionWrapper>
 
           {data ? (

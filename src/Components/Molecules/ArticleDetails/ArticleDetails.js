@@ -4,13 +4,15 @@ import Category from '../../Atoms/Category/Category';
 import Title from '../../Atoms/Title/Title';
 import { StyledArticleDetails } from './ArticelDetails.styles';
 
-const ArticleDetails = ({ date, title, category, sub }) => {
+const ArticleDetails = ({ date, title, category, sub, light }) => {
   return (
     <StyledArticleDetails data-testid={title}>
       {sub ? (
         <>
           {dateToDisplay(date)}
-          <Title sub={sub}>{title}</Title>
+          <Title sub={sub} light={light}>
+            {title}
+          </Title>
         </>
       ) : (
         <>
@@ -19,7 +21,7 @@ const ArticleDetails = ({ date, title, category, sub }) => {
         </>
       )}
 
-      <Category category={category} />
+      <Category category={category} light={light} />
     </StyledArticleDetails>
   );
 };

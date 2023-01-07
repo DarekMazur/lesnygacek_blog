@@ -14,13 +14,14 @@ const BlogPage = () => {
       <GlobalStyle />
       <Layout>
         <main>
-          <Wrapper>
+          <Wrapper contentWidth="100%">
             <Title>Articles</Title>
+          </Wrapper>
+          <Wrapper contentWidth="100%" display="grid" grid="2" gap="4rem">
             {mockData.map((post) => (
-              <ArticleThumb key={post.id} articleData={post} />
+              <ArticleThumb key={post.id} articleData={post} width="none" />
             ))}
           </Wrapper>
-          <Wrapper align={{ justify: 'center', align: 'start' }}>lorem ipsum</Wrapper>
         </main>
       </Layout>
     </ThemeProvider>
