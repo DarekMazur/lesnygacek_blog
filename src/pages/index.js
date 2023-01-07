@@ -12,6 +12,8 @@ import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
 
 import { mockData } from '../data/mockData';
+import { mockPageData } from '../data/mockPageData';
+import { highlightFirstSentence } from '../utils/helpers/highlightFirstSentence';
 
 const IndexPage = () => {
   const [data, setData] = useState([]);
@@ -33,8 +35,8 @@ const IndexPage = () => {
         <main>
           <SectionWrapper title="Bushcrafty, bushcrafty" options={['right', 'light']}>
             <P options={{ size: 'xl', weight: 'fat', justify: 'center' }}>
-              <Span color={'brown'}>Lorem ipsum dolor sit amet consectetur.</Span> Dignissim felis sit integer cursus mattis nascetur ut. Dapibus
-              adipiscing enim eros sed nec. Euismod blandit sapien viverra velit neque sed.
+              <Span color={'brown'}>{highlightFirstSentence(mockPageData.description).firstSentence}.</Span>
+              {highlightFirstSentence(mockPageData.description).other}
             </P>
           </SectionWrapper>
 
