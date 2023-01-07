@@ -8,7 +8,7 @@ const container = renderWithProvider(<ArticleDetails date={'2022-08-02T12:01:28.
 
 describe('Render ArticleDetails', () => {
   it('- use props:', () => {
-    expect(screen.getByTestId('Lorem Ipsum')).toContainHTML('2022-08-02T12:01:28.266Z');
+    expect(screen.getByTestId('Lorem Ipsum')).toContainHTML('02.08.2022');
     expect(screen.getByTestId('Lorem Ipsum')).toContainHTML('Lorem Ipsum');
     expect(screen.getByTestId('Lorem Ipsum')).toContainHTML('</svg>');
     expect(screen.getByTestId('Lorem Ipsum')).toContainHTML('Narzędzia');

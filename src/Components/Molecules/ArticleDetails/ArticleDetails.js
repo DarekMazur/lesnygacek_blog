@@ -1,4 +1,5 @@
 import React from 'react';
+import { dateToDisplay } from '../../../utils/helpers/dateToDisplay';
 import Category from '../../Atoms/Category/Category';
 import Title from '../../Atoms/Title/Title';
 import { StyledArticleDetails } from './ArticelDetails.styles';
@@ -8,13 +9,13 @@ const ArticleDetails = ({ date, title, category, sub }) => {
     <StyledArticleDetails data-testid={title}>
       {sub ? (
         <>
-          {date}
+          {dateToDisplay(date)}
           <Title sub={sub}>{title}</Title>
         </>
       ) : (
         <>
           {<Title sub={sub}>{title}</Title>}
-          {date}
+          {dateToDisplay(date)}
         </>
       )}
 
