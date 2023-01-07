@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import Logo from '../../Atoms/Logo/Logo';
 import MenuListItem from '../../Atoms/MenuListItem/MenuListItem';
@@ -7,7 +8,9 @@ import { StyledHeder } from './Header.styles';
 const Header = () => {
   return (
     <StyledHeder>
-      <Logo logo={'long'} />
+      <Link to="/">
+        <Logo logo={'long'} />
+      </Link>
       <MenuList>
         <MenuListItem light>Item</MenuListItem>
         <MenuListItem light>Item</MenuListItem>
