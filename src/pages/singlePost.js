@@ -26,12 +26,12 @@ const SinglePost = () => {
             formats={['auto', 'webp']}
           />
           <ArticleDetails date={mockData[0].publishedAt} title={mockData[0].title} category={mockData[0].category} />
-          <section>
-            <Wrapper align={{ justify: 'center', align: 'start' }} direction="column">
+          <Wrapper as="section">
+            <Wrapper align={{ justify: 'center', align: 'start' }} direction="column" contentWidth="70%">
               {mockData[0].postBody}
               <p>Signature</p>
             </Wrapper>
-          </section>
+          </Wrapper>
           <section>
             <Button primaryText={'Previous'} secondaryText={'Go on!'} />
             <Button primaryText={'Next'} secondaryText={'Go on!'} />
