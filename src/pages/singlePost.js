@@ -9,6 +9,7 @@ import ArticleDetails from '../Components/Molecules/ArticleDetails/ArticleDetail
 import { mockData } from '../data/mockData';
 import Wrapper from '../Components/Molecules/Wrapper/Wrapper';
 import Pagination from '../Components/Molecules/Pagination/Pagination';
+import Signature from '../Components/Atoms/Signature/Signature';
 
 const SinglePost = () => {
   return (
@@ -29,7 +30,7 @@ const SinglePost = () => {
           <Wrapper as="section" contentWidth="100%">
             <Wrapper align={{ justify: 'center', align: 'start' }} direction="column" contentWidth="70%">
               {mockData[0].postBody}
-              <p>Signature</p>
+              <Signature />
             </Wrapper>
           </Wrapper>
           <Pagination />
