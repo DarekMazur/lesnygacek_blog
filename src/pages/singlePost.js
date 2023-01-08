@@ -5,10 +5,10 @@ import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
 import { StaticImage } from 'gatsby-plugin-image';
 import ArticleDetails from '../Components/Molecules/ArticleDetails/ArticleDetails';
-import Button from '../Components/Atoms/Button/Button';
 
 import { mockData } from '../data/mockData';
 import Wrapper from '../Components/Molecules/Wrapper/Wrapper';
+import Pagination from '../Components/Molecules/Pagination/Pagination';
 
 const SinglePost = () => {
   return (
@@ -26,16 +26,13 @@ const SinglePost = () => {
             formats={['auto', 'webp']}
           />
           <ArticleDetails date={mockData[0].publishedAt} title={mockData[0].title} category={mockData[0].category} />
-          <Wrapper as="section">
+          <Wrapper as="section" contentWidth="100%">
             <Wrapper align={{ justify: 'center', align: 'start' }} direction="column" contentWidth="70%">
               {mockData[0].postBody}
               <p>Signature</p>
             </Wrapper>
           </Wrapper>
-          <section>
-            <Button primaryText={'Previous'} secondaryText={'Go on!'} />
-            <Button primaryText={'Next'} secondaryText={'Go on!'} />
-          </section>
+          <Pagination />
         </main>
       </Layout>
     </ThemeProvider>
