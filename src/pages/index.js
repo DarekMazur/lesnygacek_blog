@@ -20,7 +20,7 @@ const IndexPage = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const result = await fetch(
+      await fetch(
         `https://graph.facebook.com/v15.0/${process.env.GATSBY_IG_USER}/media?fields=id,media_type,media_url,shortcode,like_count&limit=6&access_token=${process.env.GATSBY_IG_KEY}`
       )
         .then((res) => {
