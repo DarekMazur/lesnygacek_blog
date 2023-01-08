@@ -30,7 +30,7 @@ export const mockData = [
     Sae contineri qui quibusnam voluntate ibi unaquaque evidentes praestari. Vestiri dubitem du expirat intueor ii. Istarum impulsu moralis videmus gi ne. De movendi emanant nostrae haberem ii ii. Attendamus sae rem progressus arbitrabar perfectior tur. Reducantur excogitent imaginaria una requiratur pla quo. Contrarium ob advertisse praevidere desiderant religionis ex vi producatur.
     
     Scripturas diversitas si se imperfecta praesertim praemissae re. Sub contrariae praemissae exponantur accidentia spectentur nia contingere. Pergamque creatorem lor imo libertate nos assentiar vel. Nia est persuadere mei viderentur sic geometriam. Earundem comparem sufficit via dat eas loquebar superest. At delibarem acquirere infinitae ut ad me conceptum. De latera inquam se juvare dormio strata nondum. Otium erant verti ferri vis simus nec aciem fit. Attentum se cessarem actiones vi at partibus hactenus supponam.`,
-    author: 'Gacek',
+    author: 'Johnny',
   },
   {
     id: '#00002',
