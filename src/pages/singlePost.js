@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
-import Layout from '../Components/Templates/Layout/Layout';
+import Layout from '../components/Templates/Layout/Layout';
 import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
 import { StaticImage } from 'gatsby-plugin-image';
-import ArticleDetails from '../Components/Molecules/ArticleDetails/ArticleDetails';
+import ArticleDetails from '../components/Molecules/ArticleDetails/ArticleDetails';
 
 import { mockData } from '../data/mockData';
-import Wrapper from '../Components/Molecules/Wrapper/Wrapper';
-import Pagination from '../Components/Molecules/Pagination/Pagination';
-import Signature from '../Components/Atoms/Signature/Signature';
+import Wrapper from '../components/Molecules/Wrapper/Wrapper';
+import Pagination from '../components/Molecules/Pagination/Pagination';
+import Signature from '../components/Atoms/Signature/Signature';
 
 const SinglePost = () => {
   return (

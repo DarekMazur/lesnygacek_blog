@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
-import Avatar from '../Components/Atoms/Avatar/Avatar';
-import { P } from '../Components/Atoms/P/P.styles';
-import { Span } from '../Components/Atoms/Span/Span.styles';
-import ArticleThumb from '../Components/Molecules/ArticleThumb/ArticleThumb';
-import SectionWrapper from '../Components/Molecules/SectionWrapper/SectionWrapper';
-import InstaGrid from '../Components/Organisms/InstaGrid/InstaGrid';
-import Layout from '../Components/Templates/Layout/Layout';
+import Avatar from '../components/Atoms/Avatar/Avatar';
+import { P } from '../components/Atoms/P/P.styles';
+import { Span } from '../components/Atoms/Span/Span.styles';
+import ArticleThumb from '../components/Molecules/ArticleThumb/ArticleThumb';
+import SectionWrapper from '../components/Molecules/SectionWrapper/SectionWrapper';
+import InstaGrid from '../components/Organisms/InstaGrid/InstaGrid';
+import Layout from '../components/Templates/Layout/Layout';
 import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
 
