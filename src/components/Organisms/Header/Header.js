@@ -20,7 +20,7 @@ const Header = () => {
       </Link>
       <MenuList>
         {mockMenu.map((item) => (
-          <Link to={item.link} activeStyle={activeNavStyle}>
+          <Link key={item.title} to={item.link} activeStyle={activeNavStyle}>
             <MenuListItem key={item.title} light>
               {item.title}
             </MenuListItem>
