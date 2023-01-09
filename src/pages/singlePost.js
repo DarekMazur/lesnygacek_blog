@@ -30,7 +30,7 @@ const SinglePost = () => {
           <Wrapper as="section" contentWidth="100%">
             <Wrapper align={{ justify: 'center', align: 'start' }} direction="column" contentWidth="70%">
               {mockData[0].postBody}
-              <Signature author={mockData[0].author} />
+              <Signature author={mockData[1].author} />
             </Wrapper>
           </Wrapper>
           <Pagination />

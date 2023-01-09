@@ -1,3 +1,5 @@
+import sign from '../assets/images/gacekSign.svg';
+
 export const mockData = [
   {
     id: '#00001',
@@ -30,7 +32,9 @@ export const mockData = [
     Sae contineri qui quibusnam voluntate ibi unaquaque evidentes praestari. Vestiri dubitem du expirat intueor ii. Istarum impulsu moralis videmus gi ne. De movendi emanant nostrae haberem ii ii. Attendamus sae rem progressus arbitrabar perfectior tur. Reducantur excogitent imaginaria una requiratur pla quo. Contrarium ob advertisse praevidere desiderant religionis ex vi producatur.
     
     Scripturas diversitas si se imperfecta praesertim praemissae re. Sub contrariae praemissae exponantur accidentia spectentur nia contingere. Pergamque creatorem lor imo libertate nos assentiar vel. Nia est persuadere mei viderentur sic geometriam. Earundem comparem sufficit via dat eas loquebar superest. At delibarem acquirere infinitae ut ad me conceptum. De latera inquam se juvare dormio strata nondum. Otium erant verti ferri vis simus nec aciem fit. Attentum se cessarem actiones vi at partibus hactenus supponam.`,
-    author: 'Johnny',
+    author: {
+      name: 'Johnny',
+    },
   },
   {
     id: '#00002',
@@ -62,7 +66,10 @@ export const mockData = [
     Est rei aeque dum istae res cogit. Debeo eo ex si nonne fidam se ullos talia color. Quavis cap obvium genera nullam hac. Apparet hae insuper sim naturas ostendi per poterit. Utile aliud ii modus vocem an tactu. Punctum co ac ultimum immensi ponitur sensuum im. Ope quin haec quam unam rum sibi quid. Re nova dare mens bere in vi addo. Actuali at credidi existam ex admitto ex. Vixque gloria operis has sub nia lumini agi.
     
     Scribere de habuerim de nihilque to im. Forte atqui dum nullo sae fit eodem ego. Vitro vetus sitas ut de brevi nasci nomen. Quorum at at talium certam im organa mearum. Tam cucurbitas advertebam diversorum antedictis sua continuata expergisci. Quartam admitto creatus ima nam. Agi modos longe serie veras rem nec. Chartam insanis sub advenit rei dispari nutriri.`,
-    author: 'Gacek',
+    author: {
+      name: 'Gacek',
+      sign: sign,
+    },
   },
   {
     id: '#00003',
@@ -96,7 +103,10 @@ export const mockData = [
     
     Neque fieri horum errem ab me eo credo. Hanc sic meo quae ipsa. Fal membrorum existenti conservet per sapientia dubitavit. Apta gi de et enim gnum data. Id quadratam ut archimede attingere re ne. Humanam infusum has iis veteris mei occasio replere istarum. Emanant poterit capaces at in numerum de exigere ob chartam.
     `,
-    author: 'Gacek',
+    author: {
+      name: 'Gacek',
+      sign: sign,
+    },
   },
   {
     id: '#00004',
@@ -128,7 +138,10 @@ export const mockData = [
     Rem summum ope eae notatu sicuti calida causas. Machinam assidere circulum in facultas ab. Haberem volebam tur verarum mallent etc una seu referam ignotae. Heri sic rum ante sine quas fas modi. Nos creasse pendere crescit angelos etc. Is ii veat se suae admi nisi data meas an. Ei probent enatare et naturam. Igni bere meum at vi meae ob ente foco. Progressum expectanti deo advertebam confirmari objectivam age tractandae vix dem. Assentiar im singulari examinare voluntate inhaereat de si colligere me.
     
     Ii alterius ferventi momentum co cohiberi notitiam si. Veram sed ipsos longe supra nam pla vitae cui. Eo et ad potest ausint clarae. Modi viam atra ii cera ea plus hinc. Hic efficitur cur formantur desinerem his corporeas percipior. Ubi indefinite sim deteriorem mem transferre lus. Animalia mei cernitur cui pendeant figmenta ejusmodi. Tangatur una acceptis lor intuebar deceptor sub quaesita. Reducantur cau nam perficitur ubi nec incidissem.`,
-    author: 'Gacek',
+    author: {
+      name: 'Gacek',
+      sign: sign,
+    },
   },
   {
     id: '#00005',
@@ -160,7 +173,10 @@ export const mockData = [
     Dat sufficiunt sae jam mem accidentia affirmabam indubitati. Ne optime florum nescio gi facile vitari. Ex ente et fide aspi. Ab lente gi to sexta tactu istud. Itaque putare primam nul vul. Fuse ibi unde vidi fuit hic. Ab ostensum se potestis reversus reliquis ut. Lor existeret somniemus ego remotiora tantumque terminari judicandi rea. Viderentur attendenti ea co at advertatur. Debeat fusius mentes ita sae possum putabo imo res.
     
     Nos pendam sua cogito cetera nullum melius pileos tes. Tantas reddat nec latera ubi longum ibi mox unitas. Fuerit quovis est vacabo mutata pro. Idem lus bono fato soni suas ullo jam tur. Effectrix ac contineat aestimare re meditatio. Requiratur ii ut cognoscere concipitur. Quadratam deleantur abducerem artificis ea inspectio pertinere ob. Verius in de sidera legant utiles ne. Evadit re contra sidera secius co.`,
-    author: 'Gacek',
+    author: {
+      name: 'Gacek',
+      sign: sign,
+    },
   },
   {
     id: '#00006',
@@ -193,7 +209,10 @@ export const mockData = [
     Mendax juncta mentis parvus sequor vi ferant se si. Ut debiliora consistat cerebella an co scriptura ob. Fas perspicuum repugnemus realitatem durationem uno non imaginaria perfectior ibi. Pati re vice ista ecce ante etsi co to. Dum defixus cau creatus quietem ens usitata mei prorsus. Ratio has rea sed illis vapor mutuo est putat. Humanam idemque credent animali jam dem aberrem quantum. Capram facile minima me ea numero ii secius.
     
     Quo locis utens timet nobis miror sua. Aeque fecto ii im nulli ut forte mo. Ha ac creatorem conservat perfectae exhibetur. Fas rea gallice cui exhibet probant ponamus per. Occurreret ab facultates reducantur to ei si sufficiunt. Venturum ex dubitare to curantes meditari eo opinione explicui. Sui eos vix quietem sentire dicamne antehac remotam figuram age. Nam devenimus obdormiam usu dum eminenter hac. Plus vi amen ad quis se fiat meam ii.`,
-    author: 'Gacek',
+    author: {
+      name: 'Gacek',
+      sign: sign,
+    },
   },
   {
     id: '#00007',
@@ -226,6 +245,9 @@ export const mockData = [
     Excludere im sapientia evidenter et delusisse. Externarum vi requiratur in judicarent an cavillandi. Agi praecise similium sequatur existant vel sed. Visa rem unam idea nia omne esse. An ad ea adeo otii heri vero homo. Essem paulo rem prava meo fas firma nomen.
     
     Frigus majora deo tam impios certis latere hae lus. Nia libertate meditatio hae somniorum. Id ii nunc duce item ut. Tam voces longa velit fit has durat etiam ego rerum. Externis gi im experiar constare. Volo meo iste lor omni. Undenam emittet student creatis ut ob in chartam generis. Deceptor nec dem sed studiose sufficit immobile jam. Alicui si quales caelum si ad negari loquor.`,
-    author: 'Gacek',
+    author: {
+      name: 'Gacek',
+      sign: sign,
+    },
   },
 ];
