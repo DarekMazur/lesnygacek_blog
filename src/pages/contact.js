@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { P } from '../components/Atoms/P/P.styles';
 import Title from '../components/Atoms/Title/Title';
 import Wrapper from '../components/Molecules/Wrapper/Wrapper';
 import Layout from '../components/Templates/Layout/Layout';
@@ -17,7 +18,10 @@ const ContactPage = ({ sub, light }) => {
           </Title>
         </Wrapper>
         <Wrapper align={{ justify: 'space-between' }}>
-          <div>kontact message</div>
+          <P>
+            Lorem ipsum dolor sit amet consectetur. Fusce feugiat vulputate blandit dignissim aliquet ultrices facilisi. Ipsum nunc tristique
+            consequat ac in. Amet accumsan faucibus vel velit enim id. Nisl ut orci tristique eget tincidunt ut.
+          </P>
           <div>kontact form</div>
         </Wrapper>
       </Layout>
