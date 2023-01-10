@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledFormWrapper = styled.div`
+export const StyledFormField = styled.div`
   width: ${({ options }) => (options?.width ? options.width : 'auto')};
   margin: 3rem;
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyledButton } from './Button.styles';
 
-const Button = ({ primaryText, secondaryText, loadingText, light }) => {
+const Button = ({ primaryText, secondaryText, loadingText, light, type }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -30,6 +30,7 @@ const Button = ({ primaryText, secondaryText, loadingText, light }) => {
         if (!loadingText) return setIsLoading(false);
       }}
       allowSending={loadingText}
+      type={type}
     >
       <span>{primaryText}</span>
       {loadingText ? <span data-testid="loadingSpan">{loadingText}</span> : null}

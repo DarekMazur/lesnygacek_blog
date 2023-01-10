@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
-import Button from '../components/Atoms/Button/Button';
 import MenuListItem from '../components/Atoms/MenuListItem/MenuListItem';
 import { P } from '../components/Atoms/P/P.styles';
 import Title from '../components/Atoms/Title/Title';
-import FormWrapper from '../components/Molecules/FormWrapper/FormWrapper';
+import FormField from '../components/Molecules/FormField/FormField';
 import MenuList from '../components/Molecules/MenuList/MenuList';
 import Wrapper from '../components/Molecules/Wrapper/Wrapper';
 import Layout from '../components/Templates/Layout/Layout';
@@ -31,16 +30,7 @@ const ContactPage = ({ sub, light }) => {
                 <MenuListItem social="messenger" />
               </MenuList>
             </Wrapper>
-            <FormWrapper primaryText="Send" secondaryText="Sent!" loadingText="Sending..." options={{ width: '50%' }}>
-              <input name="name" type="text" />
-              <label for="name">Name</label>
-              <input name="email" type="email" />
-              <label for="email">E-mail</label>
-              <textarea name="messageBody" />
-              <label for="messageBody">Message</label>
-              <input name="permissions" type="checkbox" />
-              <label for="permissions">Permission</label>
-            </FormWrapper>
+            <FormField primaryText="Send" secondaryText="Sent!" loadingText="Sending..." options={{ width: '50%' }} />
           </Wrapper>
         </Wrapper>
       </Layout>
