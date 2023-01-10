@@ -15,4 +15,5 @@ export const StyledWrapper = styled.div`
   grid-gap: ${({ gap, display }) => (display === 'grid' || display === 'inline-grid' ? (gap ? gap : `1rem`) : null)};
   max-width: ${({ contentWidth }) => (contentWidth ? contentWidth : '100%')};
   margin: ${({ contentWidth }) => (contentWidth ? null : '3rem')};
+  position: relative;
 `;

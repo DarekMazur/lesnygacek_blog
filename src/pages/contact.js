@@ -4,6 +4,7 @@ import Button from '../components/Atoms/Button/Button';
 import MenuListItem from '../components/Atoms/MenuListItem/MenuListItem';
 import { P } from '../components/Atoms/P/P.styles';
 import Title from '../components/Atoms/Title/Title';
+import FormWrapper from '../components/Molecules/FormWrapper/FormWrapper';
 import MenuList from '../components/Molecules/MenuList/MenuList';
 import Wrapper from '../components/Molecules/Wrapper/Wrapper';
 import Layout from '../components/Templates/Layout/Layout';
@@ -15,24 +16,22 @@ const ContactPage = ({ sub, light }) => {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Layout>
-        <Wrapper as="main">
+        <Wrapper as="main" direction="column" align={{ align: 'center' }}>
           <Title sub={sub} light={light}>
             Kontakt
           </Title>
-        </Wrapper>
-        <Wrapper align={{ justify: 'space-between' }}>
-          <div>
-            <P>
-              Lorem ipsum dolor sit amet consectetur. Fusce feugiat vulputate blandit dignissim aliquet ultrices facilisi. Ipsum nunc tristique
-              consequat ac in. Amet accumsan faucibus vel velit enim id. Nisl ut orci tristique eget tincidunt ut.
-            </P>
-            <MenuList column>
-              <MenuListItem social="instagram" />
-              <MenuListItem social="messenger" />
-            </MenuList>
-          </div>
-          <div>
-            <form>
+          <Wrapper align={{ justify: 'space-between', align: 'start' }}>
+            <Wrapper contentWidth="50%" direction="column">
+              <P>
+                Lorem ipsum dolor sit amet consectetur. Fusce feugiat vulputate blandit dignissim aliquet ultrices facilisi. Ipsum nunc tristique
+                consequat ac in. Amet accumsan faucibus vel velit enim id. Nisl ut orci tristique eget tincidunt ut.
+              </P>
+              <MenuList column>
+                <MenuListItem social="instagram" />
+                <MenuListItem social="messenger" />
+              </MenuList>
+            </Wrapper>
+            <FormWrapper primaryText="Send" secondaryText="Sent!" loadingText="Sending..." options={{ width: '50%' }}>
               <input name="name" type="text" />
               <label for="name">Name</label>
               <input name="email" type="email" />
@@ -41,9 +40,8 @@ const ContactPage = ({ sub, light }) => {
               <label for="messageBody">Message</label>
               <input name="permissions" type="checkbox" />
               <label for="permissions">Permission</label>
-            </form>
-            <Button primaryText="Send" secondaryText="Sent!" loadingText="Sending..." />
-          </div>
+            </FormWrapper>
+          </Wrapper>
         </Wrapper>
       </Layout>
     </ThemeProvider>
