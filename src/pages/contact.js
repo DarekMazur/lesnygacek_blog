@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
+import Button from '../components/Atoms/Button/Button';
 import MenuListItem from '../components/Atoms/MenuListItem/MenuListItem';
 import { P } from '../components/Atoms/P/P.styles';
 import Title from '../components/Atoms/Title/Title';
@@ -30,7 +31,19 @@ const ContactPage = ({ sub, light }) => {
               <MenuListItem social="messenger" />
             </MenuList>
           </div>
-          <div>kontact form</div>
+          <div>
+            <form>
+              <input name="name" type="text" />
+              <label for="name">Name</label>
+              <input name="email" type="email" />
+              <label for="email">E-mail</label>
+              <textarea name="messageBody" />
+              <label for="messageBody">Message</label>
+              <input name="permissions" type="checkbox" />
+              <label for="permissions">Permission</label>
+            </form>
+            <Button primaryText="Send" secondaryText="Sent!" loadingText="Sending..." />
+          </div>
         </Wrapper>
       </Layout>
     </ThemeProvider>
