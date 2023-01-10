@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render Copyright - rendered component match to snapshot: 1`] = `
-{
+Object {
   "asFragment": [Function],
   "baseElement": <body />,
   "container": <div />,
@@ -60,7 +60,7 @@ exports[`Render Copyright - rendered component match to snapshot: 1`] = `
 `;
 
 exports[`Render Copyright - rendered component match to snapshot: 2`] = `
-{
+Object {
   "asFragment": [Function],
   "baseElement": <body />,
   "container": <div />,
