@@ -58,7 +58,7 @@ export const StyledButton = styled.button`
         transform: scaleX(${({ isLoading, allowSending }) => (isLoading && allowSending ? `1` : `0`)});
         opacity: ${({ isLoading }) => (isLoading ? `1` : `0`)};
         transform-origin: 0 50%;
-        transition: transform 2.5s 500ms ease-out, opacity 100ms 500ms;
+        transition: transform 1.5s 500ms ease-out, opacity 100ms 500ms;
         z-index: -1;
       }
     }

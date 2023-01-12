@@ -1,6 +1,6 @@
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../../Atoms/Button/Button';
 import Input from '../../Atoms/Input/Input';
 import { StyledFormField } from './FormField.styles';
@@ -21,6 +21,9 @@ const FormField = ({ primaryText, secondaryText, loadingText, options }) => {
   //   e.preventDefault();
   // };
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
   const errorMessage = (message) => {
     const error = message ? <div>{message}</div> : null;
     return error;
@@ -37,14 +40,24 @@ const FormField = ({ primaryText, secondaryText, loadingText, options }) => {
         }}
         validationSchema={validationSchema}
         onSubmit={(values, { setSubmitting, resetForm }) => {
+          setIsLoading(true);
           axios
             .post('/api/sendMail', values)
             .then((res) => {
+              setIsSuccess(true);
+              setIsLoading(false);
               setSubmitting(false);
               resetForm();
               document.querySelector('#acceptTerms').checked = false;
             })
-            .catch(console.log('Ooops...'));
+            .then(
+              setTimeout(() => {
+                setIsSuccess(false);
+              }, 3000)
+            )
+            .catch((error) => {
+              console.error(error);
+            });
         }}
       >
         {({ values, errors, handleChange, handleSubmit, isSubmitting }) => (
@@ -89,7 +102,15 @@ const FormField = ({ primaryText, secondaryText, loadingText, options }) => {
               isRequired
             />
 
-            <Button primaryText={primaryText} secondaryText={secondaryText} loadingText={loadingText} type="submit" disabled={isSubmitting} />
+            <Button
+              primaryText={primaryText}
+              secondaryText={secondaryText}
+              loadingText={loadingText}
+              type="submit"
+              disabled={isSubmitting}
+              isLoading={isLoading}
+              isSuccess={isSuccess}
+            />
           </form>
         )}
       </Formik>

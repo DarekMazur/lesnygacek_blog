@@ -44,8 +44,8 @@ Input.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.bool.isRequired]),
+  onChange: PropTypes.func.isRequired,
   isRequired: PropTypes.bool,
 };
 
