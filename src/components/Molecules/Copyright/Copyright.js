@@ -3,10 +3,9 @@ import { year } from '../../../utils/helpers/date';
 import Logo from '../../Atoms/Logo/Logo';
 import CustomLink from '../../Atoms/CustomLink/CustomLink';
 import { StyledCopyright } from './Copyright.styles';
+import { Link } from 'gatsby';
 
 const Copyright = ({ pageCopy }) => {
-  const date = new Date();
-
   return (
     <StyledCopyright pageCopy={pageCopy} data-testid={pageCopy ? 'page' : 'creator'}>
       {pageCopy ? (
@@ -15,9 +14,14 @@ const Copyright = ({ pageCopy }) => {
           &copy; {year}
         </>
       ) : (
-        <p>
-          created by <CustomLink url="https://nerdistry.pl" link="Nerdistry" />
-        </p>
+        <>
+          <p>
+            <Link to="/privacy">Polityka prywatności</Link>
+          </p>
+          <p>
+            created by <CustomLink url="https://nerdistry.pl" link="Nerdistry" />
+          </p>
+        </>
       )}
     </StyledCopyright>
   );
