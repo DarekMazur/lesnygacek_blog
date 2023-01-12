@@ -38,7 +38,7 @@ const Input = ({ tag: Tag, type, name, id, label, isRequired, onChange, value, e
   );
 };
 
-Input.PropTypes = {
+Input.propTypes = {
   tag: PropTypes.string,
   type: PropTypes.string,
   name: PropTypes.string.isRequired,
