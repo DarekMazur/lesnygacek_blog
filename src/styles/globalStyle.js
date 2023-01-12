@@ -44,4 +44,14 @@ export const GlobalStyle = createGlobalStyle`
     p {
         margin: 2.7rem 0;
     }
+
+    a {
+        text-decoration: none;
+        font-weight: ${({ theme }) => theme.fontWeight.bold};
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 `;

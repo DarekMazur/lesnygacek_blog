@@ -5,6 +5,7 @@ import Button from '../../Atoms/Button/Button';
 import Input from '../../Atoms/Input/Input';
 import { StyledFormField } from './FormField.styles';
 import axios from 'axios';
+import { Link } from 'gatsby';
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -23,6 +24,18 @@ const FormField = ({ primaryText, secondaryText, loadingText, options }) => {
   const errorMessage = (message) => {
     const error = message ? <div>{message}</div> : null;
     return error;
+  };
+
+  const privacyLink = (linked, prefix, sufix) => {
+    return (
+      <>
+        {prefix ? `${prefix} ` : 'null'}
+        <a href="/privacy" target="_blank">
+          {linked}
+        </a>
+        {sufix ? ` ${sufix}` : ''}
+      </>
+    );
   };
 
   return (
@@ -91,7 +104,7 @@ const FormField = ({ primaryText, secondaryText, loadingText, options }) => {
               type="checkbox"
               name="acceptTerms"
               id="acceptTerms"
-              label="Akceptuję zasady prywatności"
+              label={privacyLink('zasady prywatności', 'Akceptuję')}
               onChange={handleChange}
               value={values.acceptTerms}
               errorMessage={errorMessage(errors.acceptTerms)}
