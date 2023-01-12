@@ -4,6 +4,7 @@ import React from 'react';
 import Button from '../../Atoms/Button/Button';
 import Input from '../../Atoms/Input/Input';
 import { StyledFormField } from './FormField.styles';
+import axios from 'axios';
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -16,9 +17,9 @@ const validationSchema = Yup.object().shape({
 });
 
 const FormField = ({ primaryText, secondaryText, loadingText, options }) => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  // };
 
   const errorMessage = (message) => {
     const error = message ? <div>{message}</div> : null;
@@ -35,6 +36,16 @@ const FormField = ({ primaryText, secondaryText, loadingText, options }) => {
           acceptTerms: false,
         }}
         validationSchema={validationSchema}
+        onSubmit={(values, { setSubmitting, resetForm }) => {
+          axios
+            .post('/api/sendMail', values)
+            .then((res) => {
+              setSubmitting(false);
+              resetForm();
+              document.querySelector('#acceptTerms').checked = false;
+            })
+            .catch(console.log('Ooops...'));
+        }}
       >
         {({ values, errors, handleChange, handleSubmit, isSubmitting }) => (
           <form onSubmit={handleSubmit}>
