@@ -6,4 +6,5 @@ export const P = styled.p`
   text-align: ${({ options }) => (options?.justify ? options.justify : 'left')};
   color: ${({ theme, options }) => (options?.color ? (theme.colors[options.color] ? theme.colors[options.color] : options.color) : 'inherit')};
   width: ${({ options }) => (options?.width ? options.width : 'auto')};
+  margin: ${({ options }) => (options?.margin ? options.margin : 'inherit')};
 `;

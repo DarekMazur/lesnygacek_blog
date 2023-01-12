@@ -17,10 +17,6 @@ const validationSchema = Yup.object().shape({
 });
 
 const FormField = ({ primaryText, secondaryText, loadingText, options }) => {
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  // };
-
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 

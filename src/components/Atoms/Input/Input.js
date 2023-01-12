@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { InputWrapper, Label, StyledInput } from './Input.styles';
+import { P } from '../P/P.styles';
 
 const Input = ({ tag: Tag, type, name, id, label, isRequired, onChange, value, errorMessage, isChecked }) => {
   const [isBlur, setIsBlur] = useState(false);
@@ -33,7 +34,7 @@ const Input = ({ tag: Tag, type, name, id, label, isRequired, onChange, value, e
         isError={errorMessage !== null}
         checked={isChecked}
       />
-      {errorMessage}
+      {errorMessage ? <P options={{ color: 'red' }}>{errorMessage}</P> : null}
     </InputWrapper>
   );
 };
