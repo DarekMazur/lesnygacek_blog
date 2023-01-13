@@ -74,31 +74,7 @@ const IndexPage = () => {
             </P>
             <Avatar />
           </SectionWrapper>
-          {/* <div>
-            <MenuList>
-              <MenuListItem>Item</MenuListItem>
-              <MenuListItem>Item</MenuListItem>
-            </MenuList>
-            <MenuList>
-              <MenuListItem social="youtube" />
-              <MenuListItem social="facebook" />
-              <MenuListItem social="instagram" />
-              <MenuListItem social="messenger" />
-            </MenuList>
-          </div>
-          <div style={{ backgroundColor: '#444' }}>
-            <MenuList>
-              <MenuListItem light>Item</MenuListItem>
-              <MenuListItem light>Item</MenuListItem>
-            </MenuList>
-            <MenuList>
-              <MenuListItem social="youtube" light />
-              <MenuListItem social="facebook" light />
-              <MenuListItem social="instagram" light />
-              <MenuListItem social="messenger" light />
-            </MenuList>
-          </div>
-
+          {/* 
           <SectionWrapper title={mockData[0].title} options={['right', 'light']}>
             <Icon icon={'fa'} iconType={['fab', 'facebook-messenger']} size="default" />
             <div>
