@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../src/styles/globalStyle';
