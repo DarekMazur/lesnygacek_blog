@@ -14,8 +14,7 @@ describe('Button:', () => {
   });
 
   it('- click button:', () => {
-    renderWithProvider(<Button primaryText={'Click me!'} secondaryText={'Success!'} loadingText={'Loading!'} />);
-    fireEvent.click(screen.getByText('Click me!'));
+    renderWithProvider(<Button primaryText={'Click me!'} secondaryText={'Success!'} loadingText={'Loading!'} isLoading={true} />);
     expect(screen.getByTestId('loadingSpan')).toHaveStyle('transform: translateY( 0% )');
   });
 

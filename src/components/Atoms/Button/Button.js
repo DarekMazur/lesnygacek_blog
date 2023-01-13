@@ -1,28 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyledButton } from './Button.styles';
 
-const Button = ({ primaryText, secondaryText, loadingText, light }) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+const Button = ({ primaryText, secondaryText, loadingText, light, type, disabled, isLoading, isSuccess }) => {
+  const [isSent, setIsSent] = useState(false);
 
-  const handleSubmit = () => {
-    setIsLoading(true);
-    //fake loading/sending
-    setTimeout(() => {
-      setIsSuccess(true);
-      setIsLoading(false);
-    }, 3000);
-    setTimeout(() => {
-      setIsSuccess(false);
-    }, 8000);
-  };
+  useEffect(() => {
+    setIsSent(isSuccess);
+  }, [isSuccess]);
 
   return (
     <StyledButton
       light={light}
       isLoading={isLoading}
-      isSuccess={isSuccess}
-      onClick={handleSubmit}
+      isSuccess={isSent}
       onMouseEnter={() => {
         if (!loadingText) return setIsLoading(true);
       }}
@@ -30,6 +20,8 @@ const Button = ({ primaryText, secondaryText, loadingText, light }) => {
         if (!loadingText) return setIsLoading(false);
       }}
       allowSending={loadingText}
+      type={type}
+      disabled={disabled}
     >
       <span>{primaryText}</span>
       {loadingText ? <span data-testid="loadingSpan">{loadingText}</span> : null}
