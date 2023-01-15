@@ -53,6 +53,7 @@
     "gatsby-plugin-sharp": "^4.20.0",
     "gatsby-plugin-styled-components": "^5.20.0",
     "gatsby-source-filesystem": "^4.20.0",
+    "gatsby-source-strapi": "npm:@relate-app/gatsby-source-strapi@^4.6.2",
     "gatsby-transformer-remark": "^5.20.0",
     "gatsby-transformer-sharp": "^4.20.0",
     "nodemailer": "^6.9.0",

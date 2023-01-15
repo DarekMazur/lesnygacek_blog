@@ -73,5 +73,14 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-source-strapi',
+      options: {
+        apiURL: process.env.STRAPI_API_URL,
+        collectionTypes: ['Post', 'Category'],
+        preview: true,
+        token: process.env.STRAPI_TOKEN,
+      },
+    },
   ],
 };
