@@ -74,12 +74,13 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-strapi',
+      resolve: 'gatsby-source-strapi-graphql',
       options: {
         apiURL: process.env.STRAPI_API_URL,
-        collectionTypes: ['Post', 'Category'],
+        collectionTypes: ['Post', 'Category', 'Author'],
         preview: true,
         token: process.env.STRAPI_TOKEN,
+        cache: false,
       },
     },
   ],
