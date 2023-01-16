@@ -21,9 +21,7 @@ const ArticleDetails = ({ date, title, categories, sub, light }) => {
         </>
       )}
 
-      {categories.map((category) => (
-        <Category key={category.title} category={category} light={light} />
-      ))}
+      {categories ? categories.map((category) => <Category key={category.title} category={category} light={light} />) : null}
     </StyledArticleDetails>
   );
 };
