@@ -4,7 +4,7 @@ import Category from '../../Atoms/Category/Category';
 import Title from '../../Atoms/Title/Title';
 import { StyledArticleDetails } from './ArticelDetails.styles';
 
-const ArticleDetails = ({ date, title, category, sub, light }) => {
+const ArticleDetails = ({ date, title, categories, sub, light }) => {
   return (
     <StyledArticleDetails data-testid={title}>
       {sub ? (
@@ -21,7 +21,9 @@ const ArticleDetails = ({ date, title, category, sub, light }) => {
         </>
       )}
 
-      <Category category={category} light={light} />
+      {categories.map((category) => (
+        <Category key={category.title} category={category} light={light} />
+      ))}
     </StyledArticleDetails>
   );
 };

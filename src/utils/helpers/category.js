@@ -4,10 +4,3 @@ export const categoryIcon = {
   thoughts: 'campfire',
   others: 'backpack',
 };
-
-export const categoryTitle = {
-  tools: 'Narzędzia',
-  trips: 'Wyprawy',
-  thoughts: 'Przemyślenia',
-  others: 'Inne',
-};
