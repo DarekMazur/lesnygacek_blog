@@ -11,7 +11,6 @@ import Layout from '../components/Templates/Layout/Layout';
 import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
 import { useStaticQuery, graphql } from 'gatsby';
-import { mockData } from '../data/mockData';
 import { mockPageData } from '../data/mockPageData';
 import { highlightFirstSentence } from '../utils/helpers/highlightFirstSentence';
 

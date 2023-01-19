@@ -7,8 +7,47 @@ import Layout from '../components/Templates/Layout/Layout';
 import { mockData } from '../data/mockData';
 import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
+import { useStaticQuery, graphql } from 'gatsby';
 
 const BlogPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allStrapiPost(sort: { fields: publishedAt, order: DESC }) {
+        edges {
+          node {
+            id
+            title
+            slug
+            publishedAt
+            author {
+              name
+              avatar {
+                file {
+                  childImageSharp {
+                    fluid {
+                      tracedSVG
+                      src
+                    }
+                  }
+                }
+              }
+              sign {
+                file {
+                  url
+                }
+              }
+            }
+            categories {
+              title
+            }
+            description
+            postBody
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -18,8 +57,8 @@ const BlogPage = () => {
             <Title>Articles</Title>
           </Wrapper>
           <Wrapper contentWidth="100%" display="grid" grid="2" gap="4rem">
-            {mockData.map((post) => (
-              <ArticleThumb key={post.id} articleData={post} width="none" />
+            {data.allStrapiPost.edges.map((post) => (
+              <ArticleThumb key={post.node.id} articleData={post.node} width="none" />
             ))}
           </Wrapper>
         </main>
