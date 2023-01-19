@@ -10,13 +10,51 @@ import InstaGrid from '../components/Organisms/InstaGrid/InstaGrid';
 import Layout from '../components/Templates/Layout/Layout';
 import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
-
+import { useStaticQuery, graphql } from 'gatsby';
 import { mockData } from '../data/mockData';
 import { mockPageData } from '../data/mockPageData';
 import { highlightFirstSentence } from '../utils/helpers/highlightFirstSentence';
 
 const IndexPage = () => {
   const [data, setData] = useState([]);
+
+  const homeData = useStaticQuery(graphql`
+    query {
+      allStrapiPost(limit: 2, sort: { fields: publishedAt, order: DESC }) {
+        edges {
+          node {
+            id
+            title
+            slug
+            publishedAt
+            author {
+              name
+              avatar {
+                file {
+                  childImageSharp {
+                    fluid {
+                      tracedSVG
+                      src
+                    }
+                  }
+                }
+              }
+              sign {
+                file {
+                  url
+                }
+              }
+            }
+            categories {
+              title
+            }
+            description
+            postBody
+          }
+        }
+      }
+    }
+  `);
 
   useEffect(() => {
     async function fetchData() {
@@ -52,8 +90,8 @@ const IndexPage = () => {
           </SectionWrapper>
 
           <SectionWrapper title="Ostatnie artukuły">
-            {mockData.slice(0, 2).map((post) => (
-              <ArticleThumb key={post.id} articleData={post} home />
+            {homeData.allStrapiPost.edges.slice(0, 2).map((post) => (
+              <ArticleThumb key={post.node.id} articleData={post.node} home />
             ))}
           </SectionWrapper>
 
