@@ -10,7 +10,7 @@ export const mockData = [
     category: 'tools',
     image:
       'https://images.unsplash.com/photo-1671087078747-cf4af4f4db49?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
-    slug: 'lorm-ipsum',
+    slug: 'zazolc-gesla-jazn',
     description:
       'Putabam creatus quantum erumpam scripto ibi sua ego. Cogitare lectorum meditari at co. Parte lus lumen atqui tanto aciem nudam rei.',
     postBody: `Aucta tur operi parte rom ignem. Fortassis ab medicinam succedens desumptas ob confirmet du mo. Cui aucta extat habet non. Ego quaesita aliosque subducam reliquis has quicquam hos recensui. Cujuspiam nonnullae plerosque et indidisse mo. Extensum dat cau habuerim tollitur iii ostendam. Gratiam me nihilum du aperire. Res temporis scribere reliquis mox nihilque supponam ita eos. Rom cui credidisse religionis sub quaestione uti.

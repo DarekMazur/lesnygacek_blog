@@ -10,13 +10,51 @@ import InstaGrid from '../components/Organisms/InstaGrid/InstaGrid';
 import Layout from '../components/Templates/Layout/Layout';
 import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
-
+import { useStaticQuery, graphql } from 'gatsby';
 import { mockData } from '../data/mockData';
 import { mockPageData } from '../data/mockPageData';
 import { highlightFirstSentence } from '../utils/helpers/highlightFirstSentence';
 
 const IndexPage = () => {
   const [data, setData] = useState([]);
+
+  const homeData = useStaticQuery(graphql`
+    query {
+      allStrapiPost {
+        edges {
+          node {
+            id
+            title
+            slug
+            publishedAt
+            author {
+              name
+              avatar {
+                file {
+                  childImageSharp {
+                    fluid {
+                      tracedSVG
+                      src
+                    }
+                  }
+                }
+              }
+              sign {
+                file {
+                  url
+                }
+              }
+            }
+            categories {
+              title
+            }
+            description
+            postBody
+          }
+        }
+      }
+    }
+  `);
 
   useEffect(() => {
     async function fetchData() {
