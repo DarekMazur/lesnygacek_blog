@@ -49,7 +49,13 @@ const IndexPage = () => {
             cover {
               file {
                 childImageSharp {
-                  gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP], layout: FULL_WIDTH)
+                  gatsbyImageData(
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP]
+                    layout: FULL_WIDTH
+                    aspectRatio: 1.6
+                    transformOptions: { fit: COVER, cropFocus: ATTENTION }
+                  )
                 }
               }
             }
