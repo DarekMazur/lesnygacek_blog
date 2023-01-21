@@ -31,10 +31,7 @@ const IndexPage = () => {
               avatar {
                 file {
                   childImageSharp {
-                    fluid {
-                      tracedSVG
-                      src
-                    }
+                    gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
                   }
                 }
               }
@@ -49,6 +46,13 @@ const IndexPage = () => {
             }
             description
             postBody
+            cover {
+              file {
+                childImageSharp {
+                  gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
+                }
+              }
+            }
           }
         }
       }

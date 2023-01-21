@@ -24,10 +24,7 @@ const BlogPage = () => {
               avatar {
                 file {
                   childImageSharp {
-                    fluid {
-                      tracedSVG
-                      src
-                    }
+                    gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
                   }
                 }
               }
@@ -42,6 +39,13 @@ const BlogPage = () => {
             }
             description
             postBody
+            cover {
+              file {
+                childImageSharp {
+                  gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
+                }
+              }
+            }
           }
         }
       }
