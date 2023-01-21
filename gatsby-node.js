@@ -36,7 +36,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               cover {
                 file {
                   childImageSharp {
-                    gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
+                    gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP], layout: FULL_WIDTH)
                   }
                 }
               }
