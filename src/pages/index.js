@@ -53,7 +53,7 @@ const IndexPage = () => {
                     placeholder: BLURRED
                     formats: [AUTO, WEBP]
                     layout: FULL_WIDTH
-                    aspectRatio: 3.2
+                    aspectRatio: 1.8
                     transformOptions: { fit: COVER, cropFocus: ATTENTION }
                   )
                 }
