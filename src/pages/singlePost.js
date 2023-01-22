@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import Layout from '../components/Templates/Layout/Layout';
 import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
-import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import ArticleDetails from '../components/Molecules/ArticleDetails/ArticleDetails';
 
 import Wrapper from '../components/Molecules/Wrapper/Wrapper';
@@ -19,15 +19,6 @@ const SinglePost = ({ pageContext }) => {
       <GlobalStyle />
       <Layout>
         <main>
-          {/* <StaticImage
-            src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
-            alt=""
-            placeholder="blurred"
-            layout="fullWidth"
-            transformOptions={{ fit: 'cover', cropFocus: 'attention' }}
-            aspectRatio={16 / 5}
-            formats={['auto', 'webp']}
-          /> */}
           <GatsbyImage image={cover} alt={article.title} />
           <ArticleDetails date={article.publishedAt} title={article.title} categories={article.categories} />
           <Wrapper as="section" contentWidth="100%">
