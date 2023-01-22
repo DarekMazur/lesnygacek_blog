@@ -18,10 +18,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 avatar {
                   file {
                     childImageSharp {
-                      fluid {
-                        tracedSVG
-                        src
-                      }
+                      gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
                     }
                   }
                 }
@@ -33,21 +30,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               }
               categories {
                 title
-                icon {
-                  file {
-                    url
-                  }
-                }
-                defaultIcon
               }
               description
               postBody
               cover {
                 file {
                   childImageSharp {
-                    fluid {
-                      src
-                    }
+                    gatsbyImageData(
+                      placeholder: BLURRED
+                      formats: [AUTO, WEBP]
+                      layout: FULL_WIDTH
+                      aspectRatio: 3.2
+                      transformOptions: { fit: COVER, cropFocus: ATTENTION }
+                    )
                   }
                 }
               }

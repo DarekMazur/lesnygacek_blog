@@ -4,7 +4,6 @@ import Title from '../components/Atoms/Title/Title';
 import ArticleThumb from '../components/Molecules/ArticleThumb/ArticleThumb';
 import Wrapper from '../components/Molecules/Wrapper/Wrapper';
 import Layout from '../components/Templates/Layout/Layout';
-import { mockData } from '../data/mockData';
 import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
 import { useStaticQuery, graphql } from 'gatsby';
@@ -24,10 +23,7 @@ const BlogPage = () => {
               avatar {
                 file {
                   childImageSharp {
-                    fluid {
-                      tracedSVG
-                      src
-                    }
+                    gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
                   }
                 }
               }
@@ -42,6 +38,19 @@ const BlogPage = () => {
             }
             description
             postBody
+            cover {
+              file {
+                childImageSharp {
+                  gatsbyImageData(
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP]
+                    layout: FULL_WIDTH
+                    aspectRatio: 1.6
+                    transformOptions: { fit: COVER, cropFocus: ATTENTION }
+                  )
+                }
+              }
+            }
           }
         }
       }
