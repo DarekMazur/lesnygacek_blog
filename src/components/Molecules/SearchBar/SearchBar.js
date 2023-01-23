@@ -1,12 +1,13 @@
 import React from 'react';
 import Icon from '../../Atoms/Icon/Icon';
+import { StyledSearchBar } from './SearchBar.styles';
 
 const SearchBar = () => {
   return (
-    <div>
-      <Icon icon="fa" iconType={['fas', 'search']} light />
+    <StyledSearchBar>
+      <Icon icon="fa" iconType={['fas', 'search']} light size="small" />
       <input name="search" placeholder="serach..." />
-    </div>
+    </StyledSearchBar>
   );
 };
 export default SearchBar;
