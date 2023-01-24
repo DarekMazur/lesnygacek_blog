@@ -1,17 +1,19 @@
 import styled from 'styled-components';
 
 export const StyledSearchBar = styled.div`
-  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
 
   span {
-    position: absolute;
-    right: 0;
-    top: 0;
+    transform: translateY(-0.5rem);
   }
 
   input {
-    position: absolute;
-    right: 0;
-    top: 0;
+    height: 3rem;
+    transform-origin: 100% 50%;
+    transform: ${({ isActive }) => (isActive ? `scaleX(1)` : `scaleX(0)`)};
+    transition: 300ms transform ease-out;
   }
 `;
