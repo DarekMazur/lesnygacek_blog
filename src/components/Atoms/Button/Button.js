@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { StyledButton } from './Button.styles';
 
-const Button = ({ primaryText, secondaryText, loadingText, light, type, disabled, isLoading, isSuccess }) => {
+const Button = ({ primaryText, secondaryText, loadingText, light, type, disabled, isLoading: isLoadingProp, isSuccess }) => {
   const [isSent, setIsSent] = useState(false);
+  const [isLoading, setIsLoading] = useState(isLoadingProp);
 
   useEffect(() => {
     setIsSent(isSuccess);
