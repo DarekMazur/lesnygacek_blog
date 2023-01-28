@@ -4,6 +4,7 @@ import { mockMenu } from '../../../data/mockMenu';
 import Logo from '../../Atoms/Logo/Logo';
 import MenuListItem from '../../Atoms/MenuListItem/MenuListItem';
 import MenuList from '../../Molecules/MenuList/MenuList';
+import SearchBar from '../../Molecules/SearchBar/SearchBar';
 import { StyledHeder } from './Header.styles';
 
 const activeNavStyle = {
@@ -28,7 +29,7 @@ const Header = () => {
         ))}
       </MenuList>
       <div>
-        search
+        <SearchBar />
         <MenuList>
           <MenuListItem light social="youtube" />
           <MenuListItem light social="instagram" />
