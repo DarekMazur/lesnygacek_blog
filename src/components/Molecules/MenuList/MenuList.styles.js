@@ -11,6 +11,6 @@ export const StyledMenuList = styled.ul`
   margin: 0;
 
   a {
-    text-decoration: none;
+    text-decoration: none !important;
   }
 `;
