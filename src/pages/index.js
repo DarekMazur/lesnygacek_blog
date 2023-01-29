@@ -15,8 +15,6 @@ import { mockPageData } from '../data/mockPageData';
 import { highlightFirstSentence } from '../utils/helpers/highlightFirstSentence';
 
 const IndexPage = () => {
-  const [data, setData] = useState([]);
-
   const homeData = useStaticQuery(graphql`
     query {
       allStrapiPost(limit: 2, sort: { fields: publishedAt, order: DESC }) {
@@ -65,27 +63,6 @@ const IndexPage = () => {
     }
   `);
 
-  useEffect(() => {
-    async function fetchData() {
-      await fetch(
-        `https://graph.facebook.com/v15.0/${process.env.GATSBY_IG_USER}/media?fields=id,media_type,media_url,shortcode,like_count&limit=8&access_token=${process.env.GATSBY_IG_KEY}`
-      )
-        .then((res) => {
-          if (res.ok) {
-            return res.json();
-          }
-          throw new Error('Something went wrong');
-        })
-        .then((result) => {
-          setData(result.data);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }
-    fetchData();
-  }, []);
-
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -104,11 +81,9 @@ const IndexPage = () => {
             ))}
           </SectionWrapper>
 
-          {data ? (
-            <SectionWrapper title="Rzuć okiem na Insta" options={['right', 'light']}>
-              <InstaGrid data={data} />
-            </SectionWrapper>
-          ) : null}
+          <SectionWrapper title="Rzuć okiem na Insta" options={['right', 'light']}>
+            <InstaGrid />
+          </SectionWrapper>
 
           <SectionWrapper title="O mnie słów kilka" contentWidth="60%" align={{ align: 'center' }}>
             <P options={{ color: 'white' }}>
