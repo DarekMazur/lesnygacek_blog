@@ -1,9 +1,26 @@
 import React, { useEffect, useState } from 'react';
+import { theme } from '../../../utils/themes/theme';
 import InstaThumb from '../../Molecules/InstaThumb/InstaThumb';
 import { StyledGrid } from './InstaGrid.styles';
 
 const InstaGrid = () => {
   const [data, setData] = useState([]);
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  };
+  const [limit, setLimit] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener('resize', updateDimensions);
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, []);
+
+  useEffect(() => {
+    width < theme.breakpoints.wide ? setLimit(6) : setLimit(8);
+  }, [width]);
 
   useEffect(() => {
     async function fetchData() {
@@ -28,7 +45,9 @@ const InstaGrid = () => {
 
   return (
     <StyledGrid>
-      {data ? data.map((item) => <InstaThumb key={item.id} imgUrl={item.media_url} count={item.like_count} link={item.shortcode} />) : null}
+      {data
+        ? data.slice(0, limit).map((item) => <InstaThumb key={item.id} imgUrl={item.media_url} count={item.like_count} link={item.shortcode} />)
+        : null}
     </StyledGrid>
   );
 };

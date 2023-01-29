@@ -31,9 +31,9 @@ export const theme = {
   },
 
   breakpoints: {
-    wide: '1200px',
-    desktop: '1080px',
-    tablet: '800px',
-    mobile: '400px',
+    wide: '1440',
+    desktop: '1080',
+    tablet: '800',
+    mobile: '400',
   },
 };
