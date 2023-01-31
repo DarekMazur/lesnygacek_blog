@@ -10,6 +10,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import Loading from '../components/Molecules/Loading/Loading';
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
@@ -89,7 +90,7 @@ const BlogPage = () => {
                 dataLength={postsList.length}
                 next={getMorePosts}
                 hasMore={hasMore}
-                loader={<h4>Loading...</h4>}
+                loader={<Loading />}
                 endMessage=<h4>To by było na tyle. Wróć później po więcej</h4>
               >
                 {postsList.map((post) => (
