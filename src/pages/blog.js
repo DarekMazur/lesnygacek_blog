@@ -11,6 +11,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Loading from '../components/Molecules/Loading/Loading';
+import { P } from '../components/Atoms/P/P.styles';
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
@@ -94,7 +95,11 @@ const BlogPage = () => {
               next={getMorePosts}
               hasMore={hasMore}
               loader={<Loading />}
-              endMessage=<h4>To by było na tyle. Wróć później po więcej</h4>
+              endMessage={
+                <P options={{ margin: '3rem', weight: 'fat', size: 'lm' }} style={{ gridColumnStart: '1' }}>
+                  To by było na tyle. Wróć później po więcej 😊
+                </P>
+              }
             >
               {postsList.map((post) => (
                 <ArticleThumb key={post.node.id} articleData={post.node} width="none" />
