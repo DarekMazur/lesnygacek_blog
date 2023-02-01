@@ -3,6 +3,28 @@ const path = require('path');
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
+  const categoriesResults = await graphql(
+    `
+      {
+        allStrapiCategory {
+          edges {
+            node {
+              id
+              title
+              slug
+              posts {
+                id
+                title
+                description
+                publishedAt
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
   const result = await graphql(
     `
       {
@@ -57,6 +79,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`);
     return;
   }
+
+  const categoryTemplate = path.resolve(`src/pages/category.js`);
+  categoriesResults.data.allStrapiCategory.edges.forEach((edge) => {
+    createPage({
+      path: `/category/${edge.node.slug}`,
+      component: categoryTemplate,
+      context: {
+        category: edge.node,
+      },
+    });
+  });
 
   const articleTemplate = path.resolve(`src/pages/singlePost.js`);
   result.data.allStrapiPost.edges.forEach((edge) => {
