@@ -7,6 +7,11 @@ import Layout from '../components/Templates/Layout/Layout';
 import { GlobalStyle } from '../styles/globalStyle';
 import { theme } from '../utils/themes/theme';
 import { useStaticQuery, graphql } from 'gatsby';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
+import Loading from '../components/Molecules/Loading/Loading';
+import { P } from '../components/Atoms/P/P.styles';
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
@@ -57,6 +62,20 @@ const BlogPage = () => {
     }
   `);
 
+  const posts = data.allStrapiPost.edges;
+
+  const [postsList, setPostList] = useState(data.allStrapiPost.edges.slice(0, 5));
+  const [hasMore, setHasMore] = useState(true);
+
+  const getMorePosts = () => {
+    const newPosts = posts.slice(postsList.length, postsList.length + 5);
+    setPostList((postsList) => [...postsList, ...newPosts]);
+  };
+
+  useEffect(() => {
+    setHasMore(posts.length > postsList.length);
+  }, [postsList]);
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -65,11 +84,28 @@ const BlogPage = () => {
           <Wrapper contentWidth="100%">
             <Title>Articles</Title>
           </Wrapper>
-          <Wrapper contentWidth="100%" display="grid" grid="2" gap="4rem">
-            {data.allStrapiPost.edges.map((post) => (
-              <ArticleThumb key={post.node.id} articleData={post.node} width="none" />
-            ))}
-          </Wrapper>
+          {postsList && postsList.length !== 0 ? (
+            <Wrapper
+              as={InfiniteScroll}
+              contentWidth="100%"
+              display="grid"
+              grid="2"
+              gap="4rem"
+              dataLength={postsList.length}
+              next={getMorePosts}
+              hasMore={hasMore}
+              loader={<Loading />}
+              endMessage={
+                <P options={{ margin: '3rem', weight: 'fat', size: 'lm' }} style={{ gridColumnStart: '1' }}>
+                  To by było na tyle. Wróć później po więcej 😊
+                </P>
+              }
+            >
+              {postsList.map((post) => (
+                <ArticleThumb key={post.node.id} articleData={post.node} width="none" />
+              ))}
+            </Wrapper>
+          ) : null}
         </main>
       </Layout>
     </ThemeProvider>
