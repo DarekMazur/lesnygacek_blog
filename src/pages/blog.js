@@ -83,22 +83,24 @@ const BlogPage = () => {
           <Wrapper contentWidth="100%">
             <Title>Articles</Title>
           </Wrapper>
-          {/* <Wrapper contentWidth="100%" display="grid" grid="2" gap="4rem"> */}
-          <Wrapper contentWidth="100%">
-            {postsList && postsList.length !== 0 ? (
-              <InfiniteScroll
-                dataLength={postsList.length}
-                next={getMorePosts}
-                hasMore={hasMore}
-                loader={<Loading />}
-                endMessage=<h4>To by było na tyle. Wróć później po więcej</h4>
-              >
-                {postsList.map((post) => (
-                  <ArticleThumb key={post.node.id} articleData={post.node} width="none" />
-                ))}
-              </InfiniteScroll>
-            ) : null}
-          </Wrapper>
+          {postsList && postsList.length !== 0 ? (
+            <Wrapper
+              as={InfiniteScroll}
+              contentWidth="100%"
+              display="grid"
+              grid="2"
+              gap="4rem"
+              dataLength={postsList.length}
+              next={getMorePosts}
+              hasMore={hasMore}
+              loader={<Loading />}
+              endMessage=<h4>To by było na tyle. Wróć później po więcej</h4>
+            >
+              {postsList.map((post) => (
+                <ArticleThumb key={post.node.id} articleData={post.node} width="none" />
+              ))}
+            </Wrapper>
+          ) : null}
         </main>
       </Layout>
     </ThemeProvider>
