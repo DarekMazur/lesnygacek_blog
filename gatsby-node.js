@@ -85,6 +85,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               }
               categories {
                 title
+                slug
               }
               description
               postBody

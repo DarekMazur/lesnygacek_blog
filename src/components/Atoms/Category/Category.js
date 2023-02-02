@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import { categoryIcon } from '../../../utils/helpers/category';
 import Icon from '../Icon/Icon';
@@ -13,7 +14,9 @@ const Category = ({ category, light }) => {
         size="small"
         light={light}
       />
-      <span>{category.title}</span>
+      <span>
+        <Link to={`/category/${category.slug}`}>{category.title}</Link>
+      </span>
     </StyledCategory>
   );
 };

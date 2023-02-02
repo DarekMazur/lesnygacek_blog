@@ -41,6 +41,7 @@ const IndexPage = () => {
             }
             categories {
               title
+              slug
             }
             description
             postBody
