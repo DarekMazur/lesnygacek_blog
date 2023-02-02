@@ -15,8 +15,41 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               posts {
                 id
                 title
-                description
+                slug
                 publishedAt
+                author {
+                  name
+                  avatar {
+                    file {
+                      childImageSharp {
+                        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
+                      }
+                    }
+                  }
+                  sign {
+                    file {
+                      url
+                    }
+                  }
+                }
+                categories {
+                  title
+                }
+                description
+                postBody
+                cover {
+                  file {
+                    childImageSharp {
+                      gatsbyImageData(
+                        placeholder: BLURRED
+                        formats: [AUTO, WEBP]
+                        layout: FULL_WIDTH
+                        aspectRatio: 1.6
+                        transformOptions: { fit: COVER, cropFocus: ATTENTION }
+                      )
+                    }
+                  }
+                }
               }
             }
           }
